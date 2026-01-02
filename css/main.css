@@ -1,0 +1,129 @@
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    color: black;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    padding: 1rem;
+    height: 70px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sidebar__ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar__li img{
+    width: 60px;
+}
+
+.sidebar__a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+main {
+    min-height: calc(100vh - 140px);
+}
+
+
+/* INICIO */
+/* Slide manual*/
+
+.slideshow__container {
+    width: 100%;
+    height: calc(100vh - 140px);
+    overflow: hidden;
+}
+
+.slides__wrapper {
+    display: flex;
+    height: 100%;
+    transition: transform 4s ease;
+}
+
+.my__slides {
+    min-width: 100%;
+    height: 100%;
+}
+
+.my__slides img {
+
+    object-fit: cover;
+    display: block;
+}
+
+.slider__text {
+    color: aliceblue;
+    padding: .5rem .75rem;
+    position: absolute;
+    top: 0;
+}
+
+.slider__nav {
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    height: .9375rem;
+    width: 15px;
+    margin: 0 .125rem;
+    background-color: #46644e;
+    opacity: .5;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+}
+
+.active,
+.dot:hover {
+    opacity: 1;
+    background-color: #6e9f32;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    height: 70px;
+}
+
+.footer__li p {
+    color: gray;
+}
+
+.footer__li.active {
+    color: black;
+    border-top: 3px solid black;
+}
