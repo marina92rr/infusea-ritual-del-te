@@ -49,6 +49,7 @@ main {
     width: 100%;
     height: calc(100vh - 140px);
     overflow: hidden;
+    position: relative;
 }
 
 .slides__wrapper {
@@ -63,7 +64,8 @@ main {
 }
 
 .my__slides img {
-
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -82,10 +84,11 @@ main {
     width: 100%;
 }
 
+/* Botones del slider */
 .dot {
     cursor: pointer;
-    height: .9375rem;
-    width: 15px;
+    height: .7rem;
+    width: 10px;
     margin: 0 .125rem;
     background-color: #46644e;
     opacity: .5;
@@ -127,3 +130,34 @@ footer {
     color: black;
     border-top: 3px solid black;
 }
+
+/* INFUSIONES */
+
+.submenu{
+    display: flex;
+    justify-content: center;
+    background-color: #6e9f32;
+    height: 3rem;
+    align-items: center;
+}
+
+.submenu__ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.submenu__ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+.submenu__ul li a:hover {
+    color: #46644e;
+    font-weight: bold;
+}
+
+/* TÉS*/
+
+/* COMO PREPARARLO */
+
+/* CONTACTO */

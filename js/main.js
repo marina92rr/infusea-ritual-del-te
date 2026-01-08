@@ -1,8 +1,8 @@
 
 //Funcion Anonima IIFE
-(function () {
 
-    
+
+(function () {
 //INICIO
 // Slider 
 const wrapper = document.querySelector('.slides__wrapper');
@@ -23,11 +23,14 @@ function currentSlide(n) {
   dots[slideIndex].classList.add('active');                         //Agregar la clase active al dot seleccionado
 }
 
+  // exponer solo esta función
+  window.currentSlide = currentSlide;
+
 // autoplay
 setInterval(() => {
   index++;
 
-  wrapper.style.transition = 'transform 3s ease';
+  wrapper.style.transition = 'transform 2s ease';
   wrapper.style.transform = `translateX(-${index * 100}%)`;
 
   // Actualizar dots
@@ -41,9 +44,9 @@ setInterval(() => {
       wrapper.style.transform = 'translateX(0)';
       index = 0;
       dots[0].classList.add('active');
-    }, 3000);
+    }, 2000);
   }
-}, 4000);
+}, 6000);
 
 //FIN
 })();

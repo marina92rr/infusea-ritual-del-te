@@ -17,14 +17,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
     <header>
         <nav class="sidebar">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="/index.html" class="sidebar__a">Inicio</a></li>
+                <li class="sidebar__li"><a href="/index.html" class="sidebar__a"><img src="img/infusea.svg"
+                            alt="Logotipo infusea"></a></li>
                 <li class="sidebar__li"><a href="/tes.html" class="sidebar__a">Tes</a></li>
                 <li class="sidebar__li"><a href="/infusiones.html" class="sidebar__a">Infusiones</a></li>
                 <li class="sidebar__li"><a href="/como-prepararlo.html" class="sidebar__a">Como prepararlo</a></li>
@@ -33,11 +34,31 @@
         </nav>
     </header>
     <main>
-        <h1>Contacto</h1>
+        <section class="contact">
+            <h1>Contacto</h1>
+            <p class="contact__p">Si tienes alguna pregunta sobre Infusea y sus conocimientos, sugerencia o simplemente quieres ponerte en contacto con
+                nosotros, no dudes en enviarnos un mensaje a través del siguiente formulario:</p>
+            <form action="GET" method="contact.php">
+                <label for="name" class="contact__label">Nombre:</label>
+                <input type="text" id="name" name="name" class="contact__input" required>
+
+                <label for="email" class="contact__label">Correo electrónico:</label>
+                <input type="email" id="email" name="email" class="contact__input" required>
+
+                <label for="message" class="contact__label">Mensaje:</label>
+                <textarea id="message" name="message" class="contact__textarea" required></textarea>
+
+                <button type="submit" class="contact__button">Enviar</button>
+            </form>
+        </section>
+        <section>
+            <iframe src="" frameborder="0"></iframe>
+        </section>
+
 
     </main>
     <footer>
-        <p class="footer__p">Asincrona 5 - Junior &copy; 2024</p>
+        <p class="footer__p">Marina Ramos Ruiz &copy;Infusea 2026</p>
     </footer>
 </body>
 

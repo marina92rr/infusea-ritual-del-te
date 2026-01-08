@@ -4,13 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Infusea - Ritual del té</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Icono de la pestaña -->
     <link rel="icon" type="image/png" href="/favicon.ico">
+
     <!-- Estilo -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
+    <!-- Archivo JavaScript -->
     <script src="js/main.js" defer></script>
 
     <!-- Tipografias -->
@@ -21,10 +24,11 @@
 </head>
 
 <body>
+    <!-- Cabecera de la página -->
     <header>
         <nav class="sidebar">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="/index.html" class="sidebar__a">Inicio</a></li>
+                <li class="sidebar__li"><a href="/index.html" class="sidebar__a"><img src="img/infusea.svg" alt="Logotipo infusea"></a></li>
                 <li class="sidebar__li"><a href="/tes.html" class="sidebar__a">Tes</a></li>
                 <li class="sidebar__li"><a href="/infusiones.html" class="sidebar__a">Infusiones</a></li>
                 <li class="sidebar__li"><a href="/como-prepararlo.html" class="sidebar__a">Como prepararlo</a></li>
@@ -32,13 +36,186 @@
             </ul>
         </nav>
     </header>
+    <!-- Cuerpo principal de la página Infusiones -->
     <main>
-        
-        <h1>Infusiones</h1>
+        <!-- Submenu de navegación interna infusiones según sus beneficios -->
+            <nav class="submenu">
+                <ul class="submenu__ul">
+                    <li class="submenu__li"><a class="submenu__a" href="#antiinflamatorio">Antiinflamatorio</a></li>
+                    <li class="submenu__li"><a class="submenu__a" href="#depurativo">Depurativo</a></li>
+                    <li class="submenu__li"><a class="submenu__a" href="#relajante">Relajante</a></li>
+                </ul>
+            </nav>
+        <!-- Articulo sobre infusiones según sus beneficios -->
+         <article>
+            <h1>Infusiones</h1>
+            <!-- Sección de infusiones antiinflamatorias -->
+            <section id="Antiinflamatorio">
+                <h2>Infusiones Antiinflamatorias</h2>
+                <section class="infusion">
+                    <h3 class="infusion__h3">Jengibre y Cúrcuma</h3>
+                    <p class="infusion__p">Ambas raíces tienen una gran capacidad antiinflamatoria y antioxidante. han demostrado reducir los marcadores de inflamación en el cuerpo y aliviar el dolor articular. Las propiedades y beneficios más destacados son:</p>
+                    <ul class="infusion__ul">
+                        <li>Reducen la inflamación y el dolor articular.</li>
+                        <li>Favorecen la digestión y alivian problemas gástricos.</li>
+                        <li>Fortalecen el sistema inmunológico.</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="img/infusion-curcuma.webp" type="image/webp">
+                        <img src="img/infusion-curcuma.png" alt="Infusión de cúrcuma y jengibre">
+                    </picture>
+                </section>
+                <section class="infusion">
+                    <h3 class="infusion__h3">Manzanilla</h3>
+                    <p class="infusion__p">posee propiedades antiinflamatorias que ayudan a reducir la irritación gastrointestinal, aliviar el estrés y mejorar el sueño. Las propiedades y beneficios más destacados son:</p>
+                    <ul class="infusion__ul">
+                        <li>Reduce la inflamación en el tracto digestivo.</li>
+                        <li>Alivia el estrés y mejora la calidad del sueño.</li>
+                        <li>Tiene un efecto relajante y favorece la digestión.</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="img/infusion-manzanilla.webp" type="image/webp">
+                        <img src="img/infusion-manzanilla.png" alt="Infusión de manzanilla">
+                    </picture>
+                </section>
+
+                <section class="infusion">
+                    <h3 class="infusion__h3">Menta y Regaliz</h3>
+                    <p class="infusion__p">La combinación de estas hierbas favorece la salud digestiva y respiratoria, aliviando inflamaciones en el tracto gastrointestinal y ayudando a despejar las vías respiratorias. Las propiedades y beneficios más destacados son:</p>
+                    <ul class="infusion__ul">
+                        <li>Alivian la inflamación del sistema digestivo.</li>
+                        <li>Mejoran la función respiratoria y reducen la irritación de garganta.</li>
+                        <li>Poseen un efecto refrescante y relajante.</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="img/infusion-menta.webp" type="image/webp">
+                        <img src="img/infusion-menta.png" alt="Infusión de menta y regaliz">
+                    </picture>
+                </section>
+                <section class="infusion">
+                    <h3 class="infusion__h3">Hinojo</h3>
+                    <p class="infusion__p">El hinojo es una planta herbácea de origen mediterráneo que puede crecer hasta dos metros de altura. Los beneficios son parecidos a los de la menta y regaliz, aliviando inflamaciones en el tracto gastrointestinal y ayudando a despejar las vías respiratorias. Las propiedades y beneficios más destacados son:</p>
+                    <ul class="infusion__ul">
+                        <li>Reducción y alivio de gases</li>
+                        <li>Mejoran la digestión y alivian el dolor estomacal.</li>
+                        <li>Propiedades para adelgazar</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="img/infusion-hinojo.webp" type="image/webp">
+                        <img src="img/infusion-hinojo.png" alt="Infusión de hinojo">
+                    </picture>
+                </section>
+            </section>
+
+            <!-- Sección de infusiones Depurativas -->
+            <section id="depurativo">
+                <h2>Infusiones Depurativas</h2>
+                 <section class="infusion">
+                    <h3 class="infusion__h3">Cola de Caballo</h3>
+                    <p class="infusion__p"> este ingrediente es rico en sales minerales como el silicio y el potasio. tienen un alto poder depurativo y favorecen la eliminación de líquidos. A su capacidad para ayudar a eliminar progresivamente el agua del organismo, se suma la de eliminar las toxinas del organismo. Sus propiedades mas destacadas son:</p>
+                    <ul class="infusion__ul">
+                        <li>Eliminación de líquidos</li>
+                        <li>Eliminación de toxinas</li>
+                        <li>Propiedades para adelgazar</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="img/infusion-cola-de-caballo.webp" type="image/webp">
+                        <img src="img/infusion-cola-de-caballo.png" alt="Infusión de cola de caballo">
+                    </picture>
+                </section>
+                <section class="infusion">
+                    <h3 class="infusion__h3">Agua de Alcachofa</h3>
+                    <p class="infusion__p"> la alcachofa destaca por ser rica en fibra y agua, con lo cual, no solo ayuda a saciar el apetito y promover el tránsito intestinal, sino también a quemar grasas. Sus propiedades mas destacadas son:</p>
+                    <ul class="infusion__ul">
+                        <li>tiene propiedades diuréticas y depurativas</li>
+                        <li>Evitan la retención de líquidos</li>
+                        <li>favorecen la digestión de las grasas y la eliminación de toxinas</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="img/infusion-alcachofa.webp" type="image/webp">
+                        <img src="img/infusion-alcachofa.png" alt="Infusión de alcachofa">
+                    </picture>
+                </section>
+                <section class="infusion">
+                    <h3 class="infusion__h3">Diente de león</h3>
+                    <p class="infusion__p">infusión con efecto purificante y diurético. Está recomendado para pacientes con hígado graso y otras enfermedades hepáticas. Sus propiedades mas destacadas son:</p>
+                    <ul class="infusion__ul">
+                        <li>Estimula la secreción de los organos del aparato digestivo</li>
+                        <li>Mejora los problemas de la piel, como el acné</li>
+                        <li>Ayuda contra en estreñimiento en personas mayores</li>
+                        <li>Mejora la circulación sanguínea.</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="" type="image/webp">
+                        <img src="" alt="">
+                    </picture>
+                </section>
+            </section>
+            <!-- Contenido de infusiones Relajantes -->
+            <section id="relajante">
+                <h2>Infusiones Relajantes</h2>
+                <section class="infusion">
+                    <h3 class="infusion__h3">Tila</h3>
+                    <p class="infusion__p">una de las plantas que tradicionalmente más se ha usado para calmar la ansiedad y favorecer el sueño. También conocida como tilo o té de tilo. Sus propiedades mas destacadas son:</p>
+                    <ul class="infusion__ul">
+                        <li>Posee propiedades antiespasmódicas, sedantes y ansiolíticas, analgésicas, diaforéticas</li>
+                        <li>Ayuda a tratar resfriados, aliviar la tos</li>
+                        <li>alivia molestias menstruales</li>
+                        <li>Es antiinflamatorio y antimicrobiano (debido a la presencia de vitamina C)</li>
+                    </ul>
+                    <picture class="infusion__img">
+                        <source srcset="" type="image/webp">
+                        <img src="" alt="">
+                    </picture>
+                </section>
+                <section class="infusion">
+                    <h3 class="infusion__h3">Valeriana</h3>
+                    <p class="infusion__p">conocida y utilizada desde la antigüedad, ha resultado muy eficaz en el tratamiento de la ansiedad y el insomnio. Sus propiedades mas destacadas son:</p>
+                    <ul class="infusion__ul">
+                        <li>Se usa como diurético, analgésico, antiespasmódico</li>
+                        <li>Ayuda a los cólicos intestinales, dolores reumáticos</li>
+                        <li>alivia molestias menstruales</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="" type="image/webp">
+                        <img src="" alt="">
+                    </picture>
+                </section>
+
+                <section class="infusion">
+                    <h3 class="infusion__h3">Melisa</h3>
+                    <p class="infusion__p">conocida como sándalo, limoncillo, limonera, menta melisa o toronjil, se caracteriza por su fuerte aroma a limón. Sus propiedades mas destacadas son:</p>
+                    <ul class="infusion__ul">
+                        <li>suele usarse como tranquilizante natural</li>
+                        <li>Es antidepresivo y ansiolítico</li>
+                        <li>Calma palpitaciones nerviosas</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="img/infusion-melisa.webp" type="image/webp">
+                        <img src="img/infusion-melisa.png" alt="Infusión de melisa">
+                    </picture>
+                </section>
+
+                <section class="infusion">
+                    <h3 class="infusion__h3">Lavanda</h3>
+                    <p class="infusion__p">la familia de las lamiáceas, es muy utilizada en cosmética (en cremas y pomadas), en perfumería o como ambientador. Se usa en su forma natural y, en especial, en extracción (con el aceite de lavanda). Sus propiedades mas destacadas son:</p>
+                    <ul class="infusion__ul">
+                        <li>Ayuda a calmar la ansiedad generalizada </li>
+                        <li>Es antidepresivo</li>
+                        <li>Se usa para relajarse y para inducir al sueño</li>
+                    </ul>
+                    <picture class="infusion__img">
+                         <source srcset="" type="image/webp">
+                        <img src="" alt="">
+                    </picture>
+                </section>
+            </section>
+         </article>
 
     </main>
+    <!-- Pie de la página infusiones -->
     <footer>
-        <p class="footer__p">Asincrona 5 - Junior &copy; 2024</p>
+        <p class="footer__p">Marina Ramos Ruiz &copy;Infusea 2026</p>
     </footer>
 </body>
 
