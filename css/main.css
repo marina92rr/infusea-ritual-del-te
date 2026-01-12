@@ -133,6 +133,7 @@ footer {
 
 /* INFUSIONES */
 
+/* Estilo submenus Infusiones-Tés-Como preparar */
 .submenu{
     display: flex;
     justify-content: center;
@@ -154,6 +155,24 @@ footer {
 .submenu__ul li a:hover {
     color: #46644e;
     font-weight: bold;
+}
+
+/* Centrar contenido */
+.infusiones {
+    width: 80%;
+    margin:0 auto;
+}
+
+.infusion__img {
+  width: 300px;
+  display: block;
+}
+
+.infusion__img img {
+  width: 100%;
+  height: auto; 
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem 0.6rem #46644e75;
 }
 
 /* TÉS*/
