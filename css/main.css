@@ -13,6 +13,7 @@
 html,
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .sidebar {
@@ -59,6 +60,7 @@ main {
 }
 
 .my__slides {
+    position: relative;
     min-width: 100%;
     height: 100%;
 }
@@ -71,11 +73,18 @@ main {
 }
 
 .slider__text {
-    color: aliceblue;
-    padding: .5rem .75rem;
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    left: 15%;
+    width: 70%;
+    color: aliceblue;
+    font-size: clamp(3rem, 5vw, 6rem);
+    text-align: center;
+    line-height: 1.1;
 }
+
 
 .slider__nav {
     text-align: center;
@@ -118,18 +127,83 @@ main {
     }
 }
 
+/* Beneficios Inicio */
+.benefits {
+    background-color: #46644e38;
+    padding: 3rem;
+    height: auto;
+}
+
+.benefits h2{
+    color: #2e4133;
+    text-align: center;
+    padding: 4rem;
+}
+
+.benefits--flex{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 2rem;
+    justify-content: center;
+
+}
+
+.benefits__img {
+    max-width: 500px;     
+}
+
+.benefits__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* rellena sin deformar */
+    
+}
+
+
+.benefits__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 40rem;
+}
+
+.benefits__card {
+    text-align: center;
+    background-color: white;
+    width: 16rem;
+    height: 15.625rem;
+    padding: 1rem;
+    box-shadow: .3rem .3rem .5rem #46644e14;
+}
+
+.benefits__card h3{
+    color: #6e9f32;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.benefits__card img{
+    width: 3.125rem;
+}
+
 footer {
     height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #2e4133;
 }
 
-.footer__li p {
-    color: gray;
+footer p {
+    color: white;
+    font-weight: bold;
 }
 
-.footer__li.active {
-    color: black;
-    border-top: 3px solid black;
-}
+
 
 /* INFUSIONES */
 
@@ -158,17 +232,44 @@ footer {
 }
 
 /* Centrar contenido */
-.infusiones {
-    width: 80%;
+.infusiones, .tes {
     margin:0 auto;
+    box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, 0.199);
+    border-radius: 1rem;
 }
 
-.infusion__img {
+.tes h1,
+.tes h2,
+.infusiones h1,
+.infusiones h2{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+
+
+/* Background color */
+.te--color, .infusion--color{
+    background-color: #6e9f3235;
+    padding: 3rem;
+}
+
+
+.te__flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3rem 0;
+    align-items: center;
+
+}
+
+.infusion__img, .te__img {
   width: 300px;
   display: block;
 }
 
-.infusion__img img {
+.infusion__img img, .te__img img {
   width: 100%;
   height: auto; 
   border-radius: 2rem;
