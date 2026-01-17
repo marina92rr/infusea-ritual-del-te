@@ -451,13 +451,13 @@ main {
 
 /* Fondo específico para el título la página de Tés */
 .title.title--tes {
-    background-image: url(img/fond-te.png);
+    background-image: url(../img/fond-te.png);
     background-position: center;
 }
 
 /* Fondo específico para el título la página de Infusiones */
 .title.title--infusiones {
-    background-image: url(img/fond-infusion.png);
+    background-image: url(../img/fond-infusion.png);
     background-position: center;
 
 }
@@ -596,7 +596,7 @@ Descripción: Reorganiza el orden de los elementos. el orden es título, imagen 
 /* Contenedor principal- fondo en fixed */
 .matcha {
     padding: 1rem 0;
-    background-image: url(img/fond-matcha.jpg);
+    background-image: url(../img/fond-matcha.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
