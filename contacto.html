@@ -1,16 +1,24 @@
+<!-- Este archivo HTML contiene la página de Contacto de Infusea.
+Estructura general:
+- Encabezado con Logotipo y navegación principal
+- Contenido principal
+- Sección de mapa de localización
+- Pie de página -->
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Infusea - Ritual del té</title>
+    <!-- Título -->
+    <title>Infusea - Ritual del té - contacto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Icono de la pestaña -->
+    <!-- Icono que se muestra en la pestaña del navegador-->
     <link rel="icon" type="image/png" href="/favicon.ico">
-    <!-- Estilo -->
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <!-- Archivo JavaScript uso de "defer" para no bloquear el renderizado -->
     <script src="js/main.js" defer></script>
 
     <!-- Tipografias -->
@@ -21,44 +29,84 @@
 </head>
 
 <body>
-    <header>
-        <nav class="sidebar">
+    <!-- Encabezado
+    Descripción: Contiene el logotipo de la Infusea y la navegación principal del sitio-->
+    <header class="sidebar">
+        <!-- Logotipo que redirige a la página principal -->
+        <a href="/index.html" class="sidebar__logo">
+            <img src="img/infusea.svg" alt="Logotipo infusea">
+        </a>
+
+        <!-- Checkbox invisible, usado para controlar apertura y cierre del menu en responsive -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- menú hamburguesa: permite oculpar o mostrar la navegación del menú responsive -->
+        <label for="menu-toggle" class="menu-icon">
+            <span class="navicon"></span>
+        </label>
+        <!-- Navegación principal de la página
+         Descripción: Contiene los enlaces a las secciones principales del sitio -->
+        <nav class="nav">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="/index.html" class="sidebar__a"><img src="img/infusea.svg"
-                            alt="Logotipo infusea"></a></li>
                 <li class="sidebar__li"><a href="/tes.html" class="sidebar__a">Tes</a></li>
                 <li class="sidebar__li"><a href="/infusiones.html" class="sidebar__a">Infusiones</a></li>
-                <li class="sidebar__li"><a href="/como-prepararlo.html" class="sidebar__a">Como prepararlo</a></li>
+                <li class="sidebar__li"><a href="/matcha.html" class="sidebar__a">Té matcha</a></li>
                 <li class="sidebar__li"><a href="/contacto.html" class="sidebar__a">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Contenido principal de la página -->
     <main>
+        <!--
+        Sección de contacto
+        Descripción: Conjunto de formulario(nombre, correo y mensaje) y una imagen decorativa 
+        -->
         <section class="contact">
-            <h1>Contacto</h1>
-            <p class="contact__p">Si tienes alguna pregunta sobre Infusea y sus conocimientos, sugerencia o simplemente quieres ponerte en contacto con
+            <h1 class="reveal up">Contacto</h1>
+            <p class="contact__p reveal up">Si tienes alguna pregunta sobre Infusea y sus conocimientos, sugerencia o
+                simplemente
+                quieres ponerte en contacto con
                 nosotros, no dudes en enviarnos un mensaje a través del siguiente formulario:</p>
-            <form action="GET" method="contact.php">
-                <label for="name" class="contact__label">Nombre:</label>
-                <input type="text" id="name" name="name" class="contact__input" required>
+            <div class="contact--flex">
+                <!--
+                Formulario de contacto
+                Descripción: Permite al usuario enviar su nombre, correo electrónico y mensaje.
+                -->
+                <form class="reveal left" action="get" method="contact.php">
+                    <label for="name" class="contact__label">Nombre:</label>
+                    <!--El atributo "required" obliga al usuario a completar el campo antes de enviar el formulario-->
+                    <input type="text" id="name" name="name" class="contact__input" placeholder="Nombre" required>
 
-                <label for="email" class="contact__label">Correo electrónico:</label>
-                <input type="email" id="email" name="email" class="contact__input" required>
+                    <label for="email" class="contact__label">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" class="contact__input" placeholder="Correo electrónico"
+                        required>
 
-                <label for="message" class="contact__label">Mensaje:</label>
-                <textarea id="message" name="message" class="contact__textarea" required></textarea>
+                    <label for="message" class="contact__label">Mensaje:</label>
+                    <textarea id="message" name="message" class="contact__textarea" placeholder="Mensaje de texto"
+                        required></textarea>
 
-                <button type="submit" class="contact__button">Enviar</button>
-            </form>
+                    <button type="submit" class="contact__button">Enviar</button>
+                </form>
+                <!-- Utilizo "picture" para optimizar el formato -->
+                <picture class="contact__img reveal right">
+                    <source srcset="img/te-verde.png" type="image/webp">
+                    <img src="img/te-verde.png" alt="vaso de cristal de te verde y una cuchara con hierba de te verde">
+                </picture>
+            </div>
         </section>
-        <section>
-            <iframe src="" frameborder="0"></iframe>
+        <!-- Sección de mapa
+        Descripción: Muestra la localización mediante Google Maps -->
+        <section class="map reveal down">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50734.91418112673!2d-6.0670583731819105!3d37.36778262825036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c10d0a6b201%3A0x6d8467b071b38be6!2zdMOpJnTDqSAtIHBhc2nDs24gcG9yIGVsIHTDqSAtIENBU1RFTEFS!5e0!3m2!1ses!2ses!4v1768419470824!5m2!1ses!2ses"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
-
-
     </main>
+    <!-- Pie de página
+    Descripción: Contiene la información legal, año de creación y datos del creador -->
     <footer>
-        <p class="footer__p">Marina Ramos Ruiz &copy;Infusea 2026</p>
+        <p class="footer__p">&copy;Infusea 2026, Marina Ramos Ruiz</p>
     </footer>
 </body>
 

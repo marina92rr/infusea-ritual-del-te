@@ -1,0 +1,175 @@
+<!--
+Descripción:
+Este archivo HTML contiene la página informativa sobre el Té Matcha de Infusea.
+
+Estructura general:
+- Encabezado con logotipo y navegación principal
+- Submenú de navegación té matcha
+- Contenido principal informativo
+- Pie de página
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Título -->
+    <title>Infusea - Ritual del té - té matcha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icono que se muestra en la pestaña del navegador-->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Archivo JavaScript uso de "defer" para no bloquear el renderizado -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Tipografias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--
+    Encabezado principal
+    Descripción: Contiene el logotipo de la Infusea y la navegación principal del sitio-->
+    <header class="sidebar">
+        <!-- Logotipo que redirige a la página principal -->
+        <a href="/index.html" class="sidebar__logo">
+            <img src="img/infusea.svg" alt="Logotipo infusea">
+        </a>
+
+        <!-- Checkbox invisible, usado para controlar apertura y cierre del menu en responsive -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- menú hamburguesa: permite oculpar o mostrar la navegación del menú responsive -->
+        <label for="menu-toggle" class="menu-icon">
+            <span class="navicon"></span>
+        </label>
+        <!-- Navegación principal de la página
+         Descripción: Contiene los enlaces a las secciones principales del sitio -->
+        <nav class="nav">
+            <ul class="sidebar__ul">
+                <li class="sidebar__li"><a href="/tes.html" class="sidebar__a">Tes</a></li>
+                <li class="sidebar__li"><a href="/infusiones.html" class="sidebar__a">Infusiones</a></li>
+                <li class="sidebar__li"><a href="/matcha.html" class="sidebar__a">Té matcha</a></li>
+                <li class="sidebar__li"><a href="/contacto.html" class="sidebar__a">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Submenú de navegación interna
+        Descripción: Permite desplazarse a las diferentes secciones informativas del artículo sobre el té matcha -->
+        <nav class="submenu">
+            <ul class="submenu__ul">
+                <li class="submenu__li"><a class="submenu__a" href="#whatis">¿Qué es?</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#prepare">Preparación</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#benefits">Beneficios</a></li>
+            </ul>
+        </nav>
+       <!-- Artículo principal 
+        Descripción: Contiene información sobre el té matcha, su origen, forma de preparación y beneficios -->
+        <article class="matcha">
+            <h1 class="reveal up">Té Matcha</h1>
+            <!-- Sección "¿Qué es el té matcha?"
+            Descripción: Explica el origen, historia y características del té matcha -->
+            <div class="matcha__box">
+                <section id="whatis">
+                    <h2 class="reveal down">¿ Qué es el té matcha?</h2>
+                    <p class="reveal right">El té matcha es un té verde de origen chino, aunque muchas personas lo conocen por su relación
+                        con la cultura japonesa. Se caracteriza por su color verde intenso y su sabor umami, que es una
+                        mezcla de dulce y amargo.</p>
+                    <!-- Imagen de té matcha -->
+                    <figure class="reveal left">
+                        <source srcset="img/matcha.webp" type="image/webp">
+                        <img src="img/matcha.png" alt="Imagen de té matcha en taza y en cuenco">
+                    </figure>
+                    <p class="reveal right">El té matcha comenzó a beberse en China durante la dinastía Song (960-1279).
+                        En ese período, hubo una gran ola de inmigrantes japoneses que viajaban a China a aprender una
+                        nueva forma de budismo.</p>
+                    <p class="reveal left">Desde hace mucho tiempo los monjes budistas descubrieron que el té ayuda a mantener la mente
+                        alerta
+                        mientras favorece a la relajación del cuerpo, condiciones ideales para meditar.</p>
+                    <p class="reveal right">Es por esto que muchos japoneses viajaron a China a estudiar budismo Zen y llevaron de regreso a
+                        Japón la costumbre de tomar té matcha. Esta costumbre se convirtió luego en un elemento
+                        importante
+                        de de la
+                        ceremonia japonesa del té, Chanoyu</p>
+                </section>
+                <!-- Sección de preparación
+                Descripción: Muestra los pasos para preparar correctamente el té matcha mediante texto y contenido multimedia(video). -->
+                <section id="prepare">
+
+                    <h2 class="reveal down">¿Cómo preparar el té matcha?</h2>
+                    <!--
+                    Vídeo explicativo del proceso de preparación del té matcha
+                    -->
+                    <video class="reveal up" autoplay muted loop playsinline>
+                        <source src="img/preparar-te-matcha.mp4" type="video/mp4">
+                    </video>
+                    <div class="steps reveal right">
+                        <!-- Paso 1 de la preparación -->
+                        <section class="step">
+                            <h3>1. Añade té matcha</h3>
+
+                            <p>En el cuenco de cerámica, vierte un gramo (una cucharada del cucharón medidor) de té
+                                matcha.</p>
+                            <p>Selecciona un cuenco 'chawan', asegurando un matcha
+                                mezclado y espumoso, mejorando su sabor y textura.</p>
+                        </section>
+                        <!-- Paso 2 de la preparación -->
+                        <section class="step reveal left">
+                            <h3>Añade agua</h3>
+                            <p>Vierte 60 ml de agua a una temperatura de 70°C en el cuenco. </p>
+                                <p>Es crucial no usar agua
+                                hirviendo ya que podría dañar las propiedades delicadas del té matcha.</p>
+                        </section>
+                        <!-- Paso 3 de la preparación -->
+                        <section class="step reveal right">
+                            <h3>Bate enérgicamente</h3>
+                            <p>Usando el batidor de bambú, bate enérgicamente en un patrón de zigzag o en forma de "W"
+                                durante
+                                30-40 segundos</p>
+                            <p>El movimiento segura que el
+                                matcha
+                                se distribuya uniformemente a través del agua</p>
+                        </section>
+                    </div>
+                </section>
+                <!-- Sección de beneficios
+                Descripción: Principales beneficios de tomar té matcha -->
+                <section id="benefits">
+                    <h2 class="reveal down">Beneficios del té matcha</h2>
+                    <p class="reveal right">El matcha es el único té que se ingiere por completo. Es decir, dado que sus hojas están molidas
+                        en
+                        diminutas partículas, cada vez que preparamos un Matcha batiendo el polvo en el agua, comemos
+                        literalmente las hojas molidas.</p>
+                    <p class="reveal left">A continuación, se presentan algunos de los beneficios del té matcha:</p>
+                    <!-- Listado de los beneficios del té matcha -->
+                    <ul class="benefits__ul reveal right">
+                        <li>Fortalece el sistema inmunitario y ayuda a reducir el estrés </li>
+                        <li>Estimula la mente y relaja el cuerpo</li>
+                        <li>Ayuda a prevenir el cáncer, infecciones y las caries</li>
+                        <li>Ayuda a bajar los niveles de azúcar en sangre</li>
+                        <li>Ayuda a prevenir los signos del Alzheimer</li>
+                        <li>Ayuda a mejorar el aspecto de la piel</li>
+                        <li>Ayuda a quemar las grasas y bajar de peso</li>
+                    </ul>
+
+                </section>
+            </div>
+
+        </article>
+    </main>
+    <!-- Pie de página
+    Descripción: Contiene la información legal, año de creación y datos del creador -->
+    <footer>
+        <p class="footer__p">Marina Ramos Ruiz &copy;Infusea 2026</p>
+    </footer>
+</body>
+
+</html>

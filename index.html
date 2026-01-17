@@ -1,16 +1,25 @@
+<!--
+Descripción: Este archivo HTML contiene la página principal (Inicio) del sitio web Infusea.
+Estructura general:
+- Encabezado con logotipo y navegación principal
+- Contenido principal con slider, beneficios y preguntas frecuentes
+- Pie de página
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Infusea - Ritual del té</title>
+    <!-- Título -->
+    <title>Infusea - Ritual del té - Página principal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Icono de la pestaña -->
+    <!-- Icono que se muestra en la pestaña del navegador-->
     <link rel="icon" type="image/png" href="/favicon.ico">
-    <!-- Estilo -->
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <!-- Archivo JavaScript uso de "defer" para no bloquear el renderizado -->
     <script src="js/main.js" defer></script>
 
     <!-- Tipografias -->
@@ -21,88 +30,111 @@
 </head>
 
 <body>
-    <header>
-        <nav class="sidebar">
+<!-- Encabezado
+    Descripción: Contiene el logotipo de la marca y la navegación principal del sitio, adaptada a dispositivos móviles mediante menú hamburguesa.-->
+    <header class="sidebar">
+        <!-- Logotipo que redirige a la página principal -->
+        <a href="/index.html" class="sidebar__logo">
+            <img src="img/infusea.svg" alt="Logotipo infusea">
+        </a>
+
+        <!-- Checkbox invisible, usado para controlar apertura y cierre del menu en responsive -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- menú hamburguesa: permite oculpar o mostrar la navegación del menú responsive -->
+        <label for="menu-toggle" class="menu-icon">
+            <span class="navicon"></span>
+        </label>
+        <!-- Navegación principal de la página
+         Contiene los enlaces a las secciones principales del sitio -->
+        <nav class="nav">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="/index.html" class="sidebar__a"><img src="img/infusea.svg"
-                            alt="Logotipo infusea"></a></li>
                 <li class="sidebar__li"><a href="/tes.html" class="sidebar__a">Tes</a></li>
                 <li class="sidebar__li"><a href="/infusiones.html" class="sidebar__a">Infusiones</a></li>
-                <li class="sidebar__li"><a href="/como-prepararlo.html" class="sidebar__a">Como prepararlo</a></li>
+                <li class="sidebar__li"><a href="/matcha.html" class="sidebar__a">Té matcha</a></li>
                 <li class="sidebar__li"><a href="/contacto.html" class="sidebar__a">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Contenido principal de la página -->
     <main>
+        <!-- Slider principal
+        Descripción: Muestra mensajes e imágenes representativas de la marca Infusea -->
         <div class="slideshow__container">
             <div class="slides__wrapper">
+                <!-- Slide 1 -->
                 <div class="my__slides fade">
-                    <h2 class="slider__text ">Un ritual para cada momento</h2>
+                    <h2 class="slider__text reveal up">Un ritual para cada momento</h2>
                     <picture>
                         <source srcset="img/slider-4.webp" type="image/webp">
-                        <img src="img/slider-4.png" alt="Mesa azul con bolsas de infusiones y tazas de te"
+                        <img src="img/slider-4.png" alt="Fondo gris oscuro con tetera, hojas y té"
                             loading="lazy">
                     </picture>
 
                 </div>
-
+                <!-- Slide 2 -->
                 <div class="my__slides fade">
-                    <h2 class="slider__text">Sabores naturales que cuidan de ti</h2>
+                    <h2 class="slider__text reveal up">Sabores naturales que cuidan de ti</h2>
                     <picture>
                         <source srcset="img/slider-2.webp" type="image/webp">
                         <img src="img/slider-2.png"
-                            alt="Tetera blanca,Taza blanca de té y cuchara blanca con hierbas y flores secas"
+                            alt="Fondo gris oscuro con tetera, hojas y té, posicionado arriba"
                             loading="lazy">
                     </picture>
 
                 </div>
-
+                <!-- Slide 3 -->
                 <div class="my__slides fade">
-                    <h2 class="slider__text">Bienestar en cada sorbo</h2>
+                    <h2 class="slider__text reveal up">Bienestar en cada sorbo</h2>
                     <picture>
                         <source srcset="img/slider-3.webp" type="image/webp">
-                        <img src="img/slider-3.jpg" alt="Mesa oscura de piedra con taza y hierbas de té" loading="lazy">
+                        <img src="img/slider-3.jpg" alt="Fondo gris oscuro con tetera, hojas y té, posicionado abajo a la derecha" loading="lazy">
                     </picture>
 
                 </div>
             </div>
-
-
         </div>
+        <!-- Navegación del slider
+        Descripción: Permite al usuario cambiar manualmente entre las diapositivas -->
         <div class="slider__nav">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+        <!-- Sección de beneficios
+        Descripción: Explica los beneficios de tomar infusiones y tés -->
         <section class="benefits">
-            <h2>Beneficios de tomar infusiones o tés</h2>
+            <h2 class="reveal up">Beneficios de tomar infusiones o tés</h2>
             <div class="benefits--flex">
-                <picture class="benefits__img">
-                    <source src="" type="img/webp">
-                    <img src="img/benefits.png" alt="">
+                <!-- Imagen de la sección beneficios -->
+                <picture class="benefits__img reveal left">
+                    <source src="img/benefits.webp" type="img/webp">
+                    <img src="img/benefits.png" alt="Taza de té boca arriba y hojas de melisa alrededor, tiene transparecia">
                 </picture>
+                <!-- Tarjetas de beneficios -->
                 <div class="benefits__cards">
-                    <div class="benefits__card">
-                        <img src="img/icon-1.png" alt="">
+                    <!-- Tarjeta 1 -->
+                    <div class="benefits__card reveal right">
+                        <img src="img/icon-1.png" alt="Icono verde de una maceta con planta">
                         <h3>Ricas en antioxidantes</h3>
                         <p>Ayudan a combatir el estrés oxidativo y contribuyen al cuidado del sistema cardiovascular y
                             la piel</p>
                     </div>
-
-                    <div class="benefits__card">
-                        <img src="img/icon-2.png" alt="">
+                    <!-- Tarjeta 2 -->
+                    <div class="benefits__card reveal right">
+                        <img src="img/icon-2.png" alt="Icono verde, una gota de agua">
                         <h3>Hidratación sin calorías</h3>
                         <p>Alternativa al café o a bebidas azucaradas: hidratan y casi no aportan calorías</p>
                     </div>
-
-                    <div class="benefits__card">
-                        <img src="img/icon-3.png" alt="">
+                    <!-- Tarjeta 3 -->
+                    <div class="benefits__card reveal right">
+                        <img src="img/icon-3.png" alt="Icono verde, de un hígado">
                         <h3>Mejoran digestión</h3>
                         <p>Ayudan a reducir la hinchazón, los gases y la pesadez después de comer</p>
                     </div>
-
-                    <div class="benefits__card">
-                        <img src="img/icon-4.png" alt="">
+                    <!-- Tarjeta 4 -->
+                    <div class="benefits__card reveal right">
+                        <img src="img/icon-4.png" alt="Icono verde, de una taza">
                         <h3>Relaja o estimula</h3>
                         <p>Algunas ayudan a relajarte y dormir mejor, mientras que otras aportan energía y concentración
                         </p>
@@ -110,13 +142,40 @@
                 </div>
             </div>
         </section>
-        <section class="teinfusion">
-            
+        <!-- Sección de preguntas frecuentes
+        Descripción: Resuelve dudas habituales sobre el consumo de infusiones y tés -->
+        <section class="questions">
+            <h2 class="reveal up">Preguntas frecuentes</h2>
+            <!-- Pregunta 1 -->
+            <div class="bloque reveal down">
+                <h3 class="h3">☕ ¿Cuántas infusiones puedo tomar al día?</h3>
+                <p class="contenido">Las infusiones sin teína, pueden tomarse entre 3 y 5 tazas al día sin problema.
+                    En el caso de los tés con teína, lo recomendable es no superar 2 a 3 tazas diarias.</p>
+            </div>
+            <!-- Pregunta 2 -->
+            <div class="bloque reveal down">
+                <h3 class="h3">🍃 ¿El té verde tiene cafeína?</h3>
+                <p class="contenido">Sí, el té verde contiene cafeína (teína), aunque menos que el café. Su efecto es
+                    más suave y progresivo gracias a la L-teanina</p>
+            </div>
+            <!-- Pregunta 3 -->
+            <div class="bloque reveal down">
+                <h3 class="h3">🌙 ¿Puedo tomar infusiones por la noche?</h3>
+                <p class="contenido">Sí, siempre que sean infusiones relajantes y sin teína, como manzanilla, tila,
+                    valeriana o rooibos</p>
+            </div>
+            <!-- Pregunta 4 -->
+            <div class="bloque reveal down">
+                <h3 class="h3">💧 ¿Las infusiones hidratan igual que el agua?</h3>
+                <p class="contenido">Sí. Las infusiones hidratan igual que el agua, sobre todo las que no contienen
+                    teína. Además, aportan sabor y, en algunos casos, beneficios digestivos o antioxidantes</p>
+            </div>
         </section>
-
     </main>
+    <!-- Pie de página
+    Descripción: Contiene la información legal, año de creación y datos del creador -->
     <footer>
-        <p class="footer__p">Marina Ramos Ruiz &copy;Infusea 2026</p>
+        <p class="footer__p">&copy;Infusea 2026, Marina Ramos Ruiz</p>
     </footer>
 </body>
 

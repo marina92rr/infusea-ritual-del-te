@@ -1,16 +1,25 @@
+<!-- Este archivo HTML contiene la página de Tés de Infusea.
+Estructura general:
+- Encabezado
+- Barra de navegación
+- SubMenú
+- Contenido principal
+- Pie de página -->
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Infusea - Ritual del té</title>
+    <!-- Título -->
+    <title>Infusea - Ritual del té - infusiones</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Icono de la pestaña -->
+    <!-- Icono que se muestra en la pestaña del navegador-->
     <link rel="icon" type="image/png" href="/favicon.ico">
-    <!-- Estilo -->
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <!-- Archivo JavaScript uso de "defer" para no bloquear el renderizado -->
     <script src="js/main.js" defer></script>
 
     <!-- Tipografias -->
@@ -21,20 +30,36 @@
 </head>
 
 <body>
-    <header>
-        <nav class="sidebar">
+    <!--Encabezado
+    Descripción: Contiene el logotipo de la marca y la navegación principal del sitio, adaptada a dispositivos móviles mediante menú hamburguesa.-->
+    <header class="sidebar">
+        <!-- Logotipo que redirige a la página principal -->
+        <a href="/index.html" class="sidebar__logo">
+            <img src="img/infusea.svg" alt="Logotipo infusea">
+        </a>
+
+        <!-- Checkbox invisible, usado para controlar apertura y cierre del menu en responsive -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- menú hamburguesa: permite oculpar o mostrar la navegación del menú responsive -->
+        <label for="menu-toggle" class="menu-icon">
+            <span class="navicon"></span>
+        </label>
+        <!-- Navegación principal de la página
+         Descripción: Contiene los enlaces a las secciones principales del sitio -->
+        <nav class="nav">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="/index.html" class="sidebar__a"><img src="img/infusea.svg"
-                            alt="Logotipo infusea"></a></li>
                 <li class="sidebar__li"><a href="/tes.html" class="sidebar__a">Tes</a></li>
                 <li class="sidebar__li"><a href="/infusiones.html" class="sidebar__a">Infusiones</a></li>
-                <li class="sidebar__li"><a href="/como-prepararlo.html" class="sidebar__a">Como prepararlo</a></li>
+                <li class="sidebar__li"><a href="/matcha.html" class="sidebar__a">Té matcha</a></li>
                 <li class="sidebar__li"><a href="/contacto.html" class="sidebar__a">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Contenido principal de la página -->
     <main>
-        <!-- Submenu de navegación interna infusiones según sus beneficios -->
+    <!--Submenú de navegación
+        Descripción: Permite filtrar el contenido de tés según sus beneficios.-->        
         <nav class="submenu">
             <ul class="submenu__ul">
                 <li class="submenu__li"><a class="submenu__a" href="#tantiinflamatorio">Antiinflamatorio</a></li>
@@ -43,170 +68,171 @@
 
             </ul>
         </nav>
+        <!-- Contenedor sobre tés 
+         Descripción: Información de todas las tés, clasificadas por beneficios -->
+        <div class="tes">
+            <!-- Título principal de la sección tés -->
+            <section class="title title--tes elipse--down">
+                <h1 class="reveal up">Tés</h1>
+            </section>
 
-        <article class="tes">
-            <h1>Tés</h1>
-            <p></p>
+            <!-- Sección tés antiinflamatorios -->
             <section id="tantiinflamatorio">
                 <h2>Tés Antiinflamatorios</h2>
-                <section class="te te--color">
-                    <h3 class="te__h3">Té verde</h3>
-                    <p class="te__p">El té verde es una bebida ancestral, originaria de China, que se ha extendido por
-                        todo el mundo por su valor medicinal y nutricional. Se obtiene de las hojas de la planta
-                        Camellia sinensis. Las propiedades y beneficios más destacados son:</p>
-                    <div class="te__flex">
-                        <ul class="te__ul">
+                <!-- té: verde -->
+                <div class="te te--color elipse--up ">
+                    <section class="te__text">
+                        <h3 class="te__h3 reveal down">Té verde</h3>
+                        <p class="te__p reveal left">El té verde es una bebida ancestral, originaria de China, que se ha
+                            extendido por
+                            todo el mundo por su valor medicinal y nutricional. Se obtiene de las hojas de la planta
+                            Camellia sinensis. Las propiedades y beneficios más destacados son:</p>
+                        <ul class="te__ul reveal right">
                             <li>Ayuda a combatir los radicales libres y el envejecimiento celular.</li>
                             <li>Reduce la inflamación crónica del organismo.</li>
                             <li>Mejora la concentración y el estado de alerta</li>
-                            <li>Ayuda a la pérdida de peso, acelerando el metabolismo y quemando la grasa corporal.</li>
+                            <li>Ayuda a la pérdida de peso, acelerando el metabolismo y quemando la grasa corporal.
+                            </li>
                         </ul>
-                        <picture class="te__img">
-                            <source srcset="img/te-verde.png" type="image/webp">
-                            <img src="img/te-verde.png"
-                                alt="vaso de cristal de te verde y una cuchara con hierba de te verde">
-                        </picture>
-                    </div>
+                    </section>
+                    <!-- Imagen de la té verde -->
+                    <picture class="te__img">
+                        <source srcset="img/te-verde.webp" type="image/webp">
+                        <img  src="img/te-verde.png"
+                            alt="vaso de cristal de te verde y una cuchara con hierba de te verde">
+                    </picture>
+                </div>
+                <!-- té: blanco -->
+                <div class="te">
+                    <!-- Imagen de la té blanco -->
+                    <picture class="te__img reveal">
+                        <source srcset="img/te-blanco.webp" type="image/webp">
+                        <img src="img/te-blanco.png" alt="vaso de cristal de te blanco, hojas secas y una manta blanca">
+                    </picture>
 
-                </section>
-                <section class="te">
-                    <h3 class="te__h3">Té blanco</h3>
+                    <section class="te__text">
+                        <h3 class="te__h3 reveal down">Té blanco</h3>
+                        <p class="te__p reveal left">El té blanco es mundialmente conocido por sus propiedades antioxidantes...
+                        </p>
 
-                    <p class="te__p">El té blanco es mundialmente conocido por sus propiedades antioxidantes, tanto es
-                        así que se le conoce como el elixir de la eterna juventud. Las propiedades y beneficios más
-                        destacados son:</p>
-                    <div class="te__flex">
-                        <picture class="te__img">
-                            <source srcset="img/te-blanco.webp" type="image/webp">
-                            <img src="img/te-blanco.png"
-                                alt="vaso de cristal de te blanco, flores secas y manta blanca">
-                        </picture>
-                        <ul class="te__ul">
+                        <ul class="te__ul reveal right">
                             <li>Reduce la presión sanguínea y ayuda a controlar el colesterol</li>
                             <li>Ayuda a mantener la línea y bajar peso</li>
                             <li>Ayuda a combatir, prevenir el cáncer y Parkinson</li>
                             <li>Mantiene la piel sana y joven</li>
                         </ul>
-                    </div>
-
-
-                </section>
-                <section class="te te--color">
-                    <h3 class="te__h3">Té oloong</h3>
-                    <p class="te__p">El té Oolong o té azul es una bebida que ha sido consumida por siglos en muchos
-                        países, concretamente en China y Taiwán. Algunos de los efectos positivos de este té, es la
-                        mejora del sistema cardiovascular hasta la reducción del riesgo de ciertos tipos de cáncer. Las
-                        propiedades y beneficios más destacados son:</p>
-                    <div class="te__flex">
+                    </section>
+                </div>
+                <!-- té: oonlong -->
+                <div class="te te--color elipse--down">
+                    <section class="te__text reveal down">
+                        <h3 class="te__h3 reveal left">Té oolong</h3>
+                        <p class="te__p right">El té Oolong o té azul es una bebida que ha sido consumida por siglos...</p>
                         <ul class="te__ul">
                             <li>Ayuda a reducir el riesgo de enfermedades cardiovasculares</li>
                             <li>Contiene compuestos antioxidantes</li>
                             <li>Reduce la obesidad y el aumento de peso</li>
                             <li>Reduce el riesgo de diabetes, Alzheimers y Parkinson</li>
                         </ul>
-                        <picture class="te__img">
-                            <source srcset="img/te-onloong.webp" type="image/webp">
-                            <img src="img/te-onloong.png"
-                                alt="taza azul y marron de te oloong, un vaso de hierbas oloong y 2 piezas de fruta">
-                        </picture>
-                    </div>
-
-                </section>
+                    </section>
+                    <!-- Imagen de la té oolong -->
+                    <picture class="te__img">
+                        <source srcset="img/te-onloong.webp" type="image/webp">
+                        <img src="img/te-onloong.png" alt="taza de té oolong azul y marrón, un tazón de hierbas y 2 piezas de frutas">
+                    </picture>
+                </div>
             </section>
-
+            <!-- Sección tés energetizantes -->
             <section id="tenergizante">
                 <h2>Tés Energizantes</h2>
-                <section class="te">
-                    <h3 class="te__h3">Té Negro</h3>
-                    <p class="te__p">El té negro es una de las infusiones más consumidas en el mundo gracias a su sabor
-                        intenso, su versatilidad y sus numerosos beneficios para la salud. Las propiedades y beneficios
-                        más destacados son:</p>
+                <!-- té: negro -->                
+                 <div class="te elipse--up">
+                    <!-- Imagen de la té negro -->
+                    <picture class="te__img">
+                        <source srcset="img/te-negro.png" type="image/webp">
+                        <img src="img/te-negro.png" alt="tetera de cristal de te negro">
+                    </picture>
+                    <section class="te__text reveal down">
+                        <h3 class="te__h3 reveal left">Té Negro</h3>
+                        <p class="te__p">El té negro es una de las infusiones más consumidas en el mundo...</p>
 
-                    <div class="te__flex">
-                        <picture class="te__img">
-                            <source srcset="img/te-negro.png" type="image/webp">
-                            <img src="img/te-negro.png" alt="tetera de cristal transparente de te negro">
-                        </picture>
-                        <ul class="te__ul">
+                        <ul class="te__ul reveal right">
                             <li>Es una excelente alternativa al café</li>
                             <li>Mejora la Salud Cardiovascular</li>
-                            <li>Ayuda en la Pérdida de Peso y mejora la salud digestiva</li>
+                            <li>Ayuda en la Pérdida de Peso</li>
                             <li>Reduce el Estrés y la Ansiedad</li>
                         </ul>
-                    </div>
+                    </section>
+                </div>
+                <div class="te te--color">
+                <!-- té: rojo -->                    
+                 <section class="te__text">
+                        <h3 class="te__h3 reveal down">Té Rojo</h3>
+                        <p class="te__p reveal left">Aunque en China se lleva consumiendo más de un milenio...</p>
 
-
-                </section>
-                <section class="te te--color">
-                    <h3 class="te__h3">Té Rojo</h3>
-                    <p class="te__p">Aunque en China se lleva consumiendo más de un milenio, el té rojo ha comenzado a
-                        consumirse en Occidente hace tan solo un par de décadas. Parte de su popularidad se debe a su
-                        sabor y a su intenso color, pero también a que se le atribuyen propiedades curativas. Las
-                        propiedades y beneficios más destacados son:</p>
-                    <div class="te__flex">
-                        <ul class="te__ul">
-                            <li>Propiedades diuréticas, aumento de la energía y reducción del estrés</li>
+                        <ul class="te__ul reveal right">
+                            <li>Propiedades diuréticas y aumento de energía</li>
                             <li>Mejora el sistema cardiovascular</li>
                             <li>Tiene propiedades digestivas</li>
                             <li>Fortalece el sistema inmunológico</li>
                         </ul>
-                        <picture class="te__img">
-                            <source srcset="img/te-rojo.png" type="image/webp">
-                            <img src="img/te-rojo.png" alt="dos vasos de cristal de te rojo y tetera de cristal">
-                        </picture>
-                    </div>
+                    </section>
+                    <!-- Imagen de la té rojo -->
+                    <picture class="te__img reveal">
+                        <source srcset="img/te-rojo.png" type="image/webp">
+                        <img src="img/te-rojo.png" alt="vasos de te rojo y tetera transparente sobre una tabla de madera">
+                    </picture>
+                </div>
+                <!-- té: romero -->
+                <div class="te elipse--down">
+                    <!-- Imagen de la té romero -->
+                    <picture class="te__img">
+                        <source srcset="img/te-romero.png" type="image/webp">
+                        <img src="img/te-romero.png" alt="te de romero de color amarillo y hojas de romero">
+                    </picture>
+                    <section class="te__text reveal down">
+                        <h3 class="te__h3 reveal left">Té de Romero</h3>
+                        <p class="te__p reveal right">El té de romero se prepara a partir de la planta Rosmarinus officinalis...
+                        </p>
 
-                </section>
-                <section class="te">
-                    <h3 class="te__h3">Té de Romero</h3>
-                    <p class="te__p">El té de romero se prepara a partir de la planta Rosmarinus officinalis, y puede
-                        combinarse con otros ingredientes como canela o limón para potenciar su sabor y sus propiedades.
-                        Las propiedades y beneficios más destacados son:</p>
-                    <div class="te__flex">
-                        <picture class="te__img">
-                            <source srcset="img/te-romero.png" type="image/webp">
-                            <img src="img/te-romero.png" alt="">
-                        </picture>
                         <ul class="te__ul">
-                            <li>Combatir el cansancio mental</li>
+                            <li>Combate el cansancio mental</li>
                             <li>Protege la salud del hígado</li>
-                            <li>Ayuda a controlar la diabetes y mejora la circulación</li>
+                            <li>Mejora la circulación</li>
                             <li>Fortalece el sistema inmunológico</li>
                         </ul>
-                    </div>
-
-
-                </section>
+                    </section>
+                </div>
             </section>
-
-            <section id="tmatcha">
-                <h2>Té Matcha</h2>
-                <section class="te te--color">
-                    <h3 class="te__h3">Té Matcha</h3>
-                    <p class="te__p">El té matcha es un tipo de té verde en polvo que se ha vuelto muy popular en los
-                        últimos años debido a sus numerosos beneficios para la salud y su sabor único. A diferencia de
-                        otros tés, el matcha se consume en su totalidad, lo que significa que se ingieren todas las
-                        propiedades de la hoja de té. Las propiedades y beneficios más destacados son:</p>
-                    <div class="te__flex" >
+            <!-- Sección té matcha -->
+            <section id="tmatcha">               
+                <h2 >Té Matcha</h2>
+                <!-- té: matcha --> 
+                <div class="te te--color elipse--up">
+                    <section class="te__text reveal down">
+                        <h3 class="te__h3 reveal left">Té Matcha</h3>
+                        <p class="te__p reveal right">El té matcha es un tipo de té verde en polvo...</p>
                         <ul class="te__ul">
                             <li>Alto contenido de antioxidantes</li>
-                            <li>Mejora la concentración y el estado de alerta</li>
+                            <li>Mejora la concentración</li>
                             <li>Ayuda en la pérdida de peso</li>
                             <li>Desintoxica el cuerpo</li>
                         </ul>
-                        <picture class="te__img">
-                            <source srcset="img/te-matcha.png" type="image/webp">
-                            <img src="img/te-matcha.png" alt="">
-                        </picture>
-                    </div>
-
-                </section>
+                    </section>
+                    <!-- Imagen de la té matcha -->
+                    <picture class="te__img">
+                        <source srcset="img/te-matcha.png" type="image/webp">
+                        <img src="img/te-matcha.png" alt="tTaza oscura con plato, y té de color verde espeso y espumoso">
+                    </picture>
+                </div>
             </section>
+        </div>
         </article>
-
     </main>
+    <!-- Pie de página
+    Descripción: Contiene la información legal, año de creación y datos del creador -->
     <footer>
-        <p class="footer__p">Asincrona 5 - Junior &copy; 2024</p>
+        <p class="footer__p">&copy;Infusea 2026, Marina Ramos Ruiz</p>
     </footer>
 </body>
 
