@@ -1,8 +1,8 @@
-/* __________________________________________________________
+/* 
    RESET GENERAL
    Descripción: Normaliza los estilos base del navegador y define
    una base visual consistente para todo el sitio.
-   __________________________________________________________ */
+    */
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +38,6 @@ h1 {
     font-size: clamp(3rem, 5vw, 4rem);
     text-shadow: 0 0 .2rem #2e413334;
 }
-
 
 /* HEADER / SIDEBAR
    Descripción: Barra de navegación principal de Infusea */
@@ -144,9 +143,7 @@ h1 {
     display: none;
 }
 
-/* __________________________________________________________
-  MENU MEDIA QUERY
-   __________________________________________________________ */
+/* MENU MEDIA QUERY*/
 @media (max-width: 48em) {
 
     /* mostrar icono */
@@ -408,10 +405,8 @@ main {
     padding: 2rem;
 }
 
-/* ==========================================================
-   INFUSIONES Y TÉS
-   Descripción: Estilos compartidos para las páginas de Infusiones y Tés, compuesto por submenús, títulos, secciones y comportamiento responsive.
-   ========================================================== */
+/* INFUSIONES Y TÉS
+   Descripción: Estilos compartidos para las páginas de Infusiones y Tés, compuesto por submenús, títulos, secciones y comportamiento responsive.*/
 
 /* SUBMENÚ DE NAVEGACIÓN */
 .submenu {
@@ -456,13 +451,13 @@ main {
 
 /* Fondo específico para el título la página de Tés */
 .title.title--tes {
-    background-image: url(/img/fond-te.png);
+    background-image: url(img/fond-te.png);
     background-position: center;
 }
 
 /* Fondo específico para el título la página de Infusiones */
 .title.title--infusiones {
-    background-image: url(/img/fond-infusion.png);
+    background-image: url(img/fond-infusion.png);
     background-position: center;
 
 }
@@ -557,10 +552,8 @@ main {
     display: block;
 }
 
-/* 
-MEDIA QUERY - MÓVIL
-Descripción: Reorganiza el orden de los elementos. el orden es título, imagen y texto.
-*/
+/* MEDIA QUERY - MÓVIL
+Descripción: Reorganiza el orden de los elementos. el orden es título, imagen y texto */
 @media (max-width: 768px) {
 
     .te,
@@ -603,7 +596,7 @@ Descripción: Reorganiza el orden de los elementos. el orden es título, imagen 
 /* Contenedor principal- fondo en fixed */
 .matcha {
     padding: 1rem 0;
-    background-image: url(/img/fond-matcha.jpg);
+    background-image: url(img/fond-matcha.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -677,10 +670,8 @@ Descripción: ajuste del listado desordenado hacia la derecha */
 
 }
 
-/* 
-    MEDIA QUERY - MÓVIL (MATCHA)
-    Descripción: Ajusta el ancho del contenedor al 85% y mejora la legibilidad en dispositivos con pantallas pequeñas. 
-*/
+/* MEDIA QUERY - MÓVIL (MATCHA)
+    Descripción: Ajusta el ancho del contenedor al 85% y mejora la legibilidad en dispositivos con pantallas pequeñas. */
 @media (max-width: 500px) {
     .matcha__box {
         width: 85%;
@@ -693,10 +684,8 @@ Descripción: ajuste del listado desordenado hacia la derecha */
     }
 }
 
-/* 
-    SECCIÓN CONTACTO
-    Descripción: Estilos de la página de contacto, incluyendo formulario, imagen y mapa de localización. 
-*/
+/* SECCIÓN CONTACTO
+    Descripción: Estilos de la página de contacto, incluyendo formulario, imagen y mapa de localización. */
 
 /* CONTENEDOR PRINCIPAL DE CONTACTO
 Descripción: uso del 60% y space-around para ajustar el espaciado de la página */
@@ -796,10 +785,8 @@ button:hover {
     }
 }
 
-/* 
-   PIE DE LA PAGINA
-   Descripción: Dimensiones y colores del pie de las páginas
- */
+/* PIE DE LA PAGINA
+   Descripción: Dimensiones y colores del pie de las páginas*/
 footer {
     height: 70px;
     display: flex;
@@ -815,10 +802,8 @@ footer p {
 }
 
 
-/* 
-    ANIMACIONES VIEWPORT
-    Descripción: Animación que usa opacidad y desplazamiento en X e Y para los elementos que sean visibles en 20% al hacer scroll en pantalla.
- */
+/* ANIMACIONES VIEWPORT
+    Descripción: Animación que usa opacidad y desplazamiento en X e Y para los elementos que sean visibles en 20% al hacer scroll en pantalla.*/
 .reveal {
     opacity: 0;
     transform: translateX(0);
