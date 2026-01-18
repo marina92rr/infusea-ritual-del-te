@@ -6,7 +6,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     list-style: none;
     text-decoration: none;
@@ -24,13 +23,11 @@
     --gray: #333333;
 }
 
-/* CONFIGURACIÓN GLOBAL */
 html,
 body {
     scroll-behavior: smooth;
 }
 
-/* Estilos base para títulos principales */
 h1 {
     padding: 4rem 0;
     text-align: center;
@@ -46,7 +43,6 @@ h1 {
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     width: 100%;
     z-index: 3;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -62,11 +58,6 @@ h1 {
 .sidebar__logo img {
     width: 60px;
     display: block;
-}
-
-/* Navegación base */
-.nav {
-    background-color: #fff;
 }
 
 /* Lista de navegación */
@@ -88,13 +79,15 @@ h1 {
     text-decoration: none;
     font-weight: bold;
     color: var(--secondary);
+    width: 100%;
+        border-top: 1px solid #f4f4f4;
 }
 
 /* MENÚ RESPONSIVE*/
 .nav {
+    background-color: #fff;
     clear: both;
     max-height: none;
-    /* desktop */
     transition: max-height .2s ease-out;
 }
 
@@ -102,7 +95,6 @@ h1 {
 .menu-icon {
     cursor: pointer;
     display: none;
-    /* desktop */
     padding: 28px 20px;
     position: relative;
     user-select: none;
@@ -145,8 +137,6 @@ h1 {
 
 /* MENU MEDIA QUERY*/
 @media (max-width: 48em) {
-
-    /* mostrar icono */
     .menu-icon {
         display: inline-block;
 
@@ -175,13 +165,6 @@ h1 {
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-    }
-
-    .sidebar__a {
-        width: 100%;
-        border-top: 1px solid #f4f4f4;
-        padding: 20px 20px;
-        color: #000;
     }
 
     /* cuando el checkbox está activo */
@@ -222,7 +205,6 @@ main {
 
 
 /* INICIO SLIDER */
-
 .slideshow__container {
     width: 100%;
     height: calc(100vh - 140px);
@@ -407,12 +389,10 @@ main {
 
 /* INFUSIONES Y TÉS
    Descripción: Estilos compartidos para las páginas de Infusiones y Tés, compuesto por submenús, títulos, secciones y comportamiento responsive.*/
-
 /* SUBMENÚ DE NAVEGACIÓN */
 .submenu {
     position: sticky;
     top: 0;
-    /* Permite que el submenú permanezca visible al hacer scroll */
     padding: 1rem;
     z-index: 1;
 
@@ -475,7 +455,7 @@ main {
     margin: 3rem 0;
 }
 
-/*   DECORACIÓN DE CURVAS - para los fondos de los titulos y secciones*/
+/* DECORACIÓN DE CURVAS - para los fondos de los titulos y secciones*/
 .elipse--up {
     clip-path: ellipse(120% 99% at 50% 100%);
 }
@@ -499,13 +479,12 @@ main {
 
 }
 
-/* Background color te/ infusión */
 .te--color,
 .infusion--color {
     background-color: #6e9f3235;
 }
 
-/*    TEXTO DE LAS SECCIONES (h3 - p - ul) */
+/*TEXTO DE LAS SECCIONES (h3 - p - ul) */
 .te__text,
 .infusion__text {
     margin: 0 auto;
@@ -593,7 +572,6 @@ Descripción: Reorganiza el orden de los elementos. el orden es título, imagen 
 /* SECCIÓN MATCHA
    Descripción: Estilos específicos para la página de Té Matcha, incluyendo fondo, contenedor principal, pasos y beneficios. */
 
-/* Contenedor principal- fondo en fixed */
 .matcha {
     padding: 1rem 0;
     background-image: url(../img/fond-matcha.jpg);
@@ -686,9 +664,6 @@ Descripción: ajuste del listado desordenado hacia la derecha */
 
 /* SECCIÓN CONTACTO
     Descripción: Estilos de la página de contacto, incluyendo formulario, imagen y mapa de localización. */
-
-/* CONTENEDOR PRINCIPAL DE CONTACTO
-Descripción: uso del 60% y space-around para ajustar el espaciado de la página */
 .contact {
     width: 60%;
     margin: 0 auto;
@@ -708,8 +683,12 @@ Descripción: uso del 60% y space-around para ajustar el espaciado de la página
 }
 
 /* FORMULARIO DE CONTACTO */
-form {
-    width: 21.875rem;
+form,
+input,
+textarea,
+button,
+.contact__img {
+  width: 21.875rem;
 }
 
 /* ETIQUETAS OCULTAS (ACCESIBILIDAD)
@@ -725,7 +704,6 @@ label {
 input,
 textarea {
     margin: 1rem 0;
-    width: 21.875rem;
     display: flex;
     padding: .7rem;
     background-color: #6e9f3240;
@@ -734,7 +712,6 @@ textarea {
 
 /* BOTÓN DE ENVÍO */
 button {
-    width: 21.875rem;
     padding: .7rem;
     background-color: var(--primary);
     color: white;
@@ -807,7 +784,6 @@ footer p {
 .reveal {
     opacity: 0;
     transform: translateX(0);
-    /* base neutra */
     transition: opacity 2s ease, transform .6s ease;
 }
 
@@ -830,5 +806,4 @@ footer p {
 .reveal.visible {
     opacity: 1 !important;
     transform: translateX(0) translateY(0);
-    /* vuelve a su sitio */
 }

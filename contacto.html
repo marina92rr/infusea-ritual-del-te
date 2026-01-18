@@ -72,7 +72,7 @@ Estructura general:
                 Formulario de contacto
                 Descripción: Permite al usuario enviar su nombre, correo electrónico y mensaje.
                 -->
-                <form class="reveal left" action="get" method="contact.php">
+                <form class="reveal left" action="#" method="post" enctype="multipart/form-data">
                     <label for="name" class="contact__label">Nombre:</label>
                     <!--El atributo "required" obliga al usuario a completar el campo antes de enviar el formulario-->
                     <input type="text" id="name" name="name" class="contact__input" placeholder="Nombre" required>
@@ -84,6 +84,10 @@ Estructura general:
                     <label for="message" class="contact__label">Mensaje:</label>
                     <textarea id="message" name="message" class="contact__textarea" placeholder="Mensaje de texto"
                         required></textarea>
+
+                    <label for="file" class="contact__label">Añadir información:</label>
+                    <input  type="file" id="file" name="file" class="contact__input" placeholder="Correo electrónico"
+                        required>
 
                     <button type="submit" class="contact__button">Enviar</button>
                 </form>
