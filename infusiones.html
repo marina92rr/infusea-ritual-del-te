@@ -18,8 +18,10 @@ Estructura general:
     <!-- Título -->
     <title>Infusea - Ritual del té - infusiones</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Descubre los diferentes tipos de infusiones y sus beneficios para la salud.">
+    <meta name="author" content="Marina Ramos Ruiz">
     <!-- Icono que se muestra en la pestaña del navegador-->
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Archivo JavaScript uso de "defer" para no bloquear el renderizado -->
@@ -37,8 +39,8 @@ Estructura general:
     Descripción: Contiene el logotipo de la marca y la navegación principal del sitio, adaptada a dispositivos móviles mediante menú hamburguesa. -->
     <header class="sidebar">
         <!-- Logotipo que redirige a la página principal -->
-        <a href="index.html" class="sidebar__logo">
-            <img src="img/infusea.svg" alt="Logotipo infusea">
+        <a href="index.html" class="sidebar__logo" title="Logotipo infusea">
+            <img src="img/infusea.svg" alt="Logotipo infusea" loading="lazy">
         </a>
 
         <!-- Checkbox invisible, usado para controlar apertura y cierre del menu en responsive -->
@@ -52,10 +54,10 @@ Estructura general:
          Descripción: Contiene los enlaces a las secciones principales del sitio -->
         <nav class="nav">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="tes.html" class="sidebar__a">Tes</a></li>
-                <li class="sidebar__li"><a href="infusiones.html" class="sidebar__a">Infusiones</a></li>
-                <li class="sidebar__li"><a href="matcha.html" class="sidebar__a">Té matcha</a></li>
-                <li class="sidebar__li"><a href="contacto.html" class="sidebar__a">Contacto</a></li>
+                <li class="sidebar__li"><a href="tes.html" class="sidebar__a" title="Sección de tés">Tes</a></li>
+                <li class="sidebar__li"><a href="infusiones.html" class="sidebar__a a--active" title="Sección de infusiones">Infusiones</a></li>
+                <li class="sidebar__li"><a href="matcha.html" class="sidebar__a" title="Sección de té matcha">Té matcha</a></li>
+                <li class="sidebar__li"><a href="contacto.html" class="sidebar__a" title="Sección de contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -65,9 +67,9 @@ Estructura general:
         Descripción: Permite filtrar el contenido de infusiones según sus beneficios.-->        
         <nav class="submenu">
             <ul class="submenu__ul">
-                <li class="submenu__li"><a class="submenu__a" href="#antiinflamatorio">Antiinflamatorio</a></li>
-                <li class="submenu__li"><a class="submenu__a" href="#depurativo">Depurativo</a></li>
-                <li class="submenu__li"><a class="submenu__a" href="#relajante">Relajante</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#antiinflamatorio" title="Beneficio antiinflamatorio">Antiinflamatorio</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#depurativo" title="Beneficio depurativo">Depurativo</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#relajante" title="Beneficio relajante">Relajante</a></li>
             </ul>
         </nav>
         <!-- Contenedor sobre infusiones 
@@ -99,7 +101,7 @@ Estructura general:
                     <!-- Imagen de la infusión Jengibre y cúrcuma -->
                     <picture class="infusion__img">
                         <source srcset="img/infusion-curcuma.webp" type="image/webp">
-                        <img src="img/infusion-curcuma.png" alt="Taza con infusión amarilla y cúrcuma alrededor del vaso">
+                        <img src="img/infusion-curcuma.jpg" alt="Taza con infusión amarilla y cúrcuma alrededor del vaso" loading="lazy">
                     </picture>
                 </div>
                 <!-- Infusión: Manzanilla -->
@@ -107,7 +109,7 @@ Estructura general:
                     <!-- Imagen de la infusión manzanilla -->
                     <picture class="infusion__img reveal left">
                         <source srcset="img/infusion-manzanilla.webp" type="image/webp">
-                        <img src="img/infusion-manzanilla.png" alt="Taza blanca con adornos florales y flores de manzanilla dentro de la infusión">
+                        <img src="img/infusion-manzanilla.jpg" alt="Taza blanca con adornos florales y flores de manzanilla dentro de la infusión" loading="lazy">
                     </picture>
                     <section class="infusion__text">
                         <h3 class="infusion__h3 reveal down">Manzanilla</h3>
@@ -138,7 +140,7 @@ Estructura general:
                     <!-- Imagen de la infusión menta y regaliz -->
                     <picture class="infusion__img reveal right">
                         <source srcset="img/infusion-menta.webp" type="image/webp">
-                        <img src="img/infusion-menta.png" alt="Infusión de menta y regaliz sobre una mesa de madera">
+                        <img src="img/infusion-menta.jpg" alt="Infusión de menta y regaliz sobre una mesa de madera" loading="lazy">
                     </picture>
                 </div>
                 <!-- Infusión: Hinojo -->
@@ -146,7 +148,7 @@ Estructura general:
                     <!-- Imagen de la infusión hinojo -->
                     <picture class="infusion__img reveal left">
                         <source srcset="img/infusion-hinojo.webp" type="image/webp">
-                        <img src="img/infusion-hinojo.png" alt="Infusión de hinojo y ramas dentro y fuera de la infusión">
+                        <img src="img/infusion-hinojo.jpg" alt="Infusión de hinojo y ramas dentro y fuera de la infusión" loading="lazy">
                     </picture>
                     <section class="infusion__text">
                         <h3 class="infusion__h3 reveal down">Hinojo</h3>
@@ -186,7 +188,7 @@ Estructura general:
                     <!-- Imagen de la infusión cola de caballo -->
                     <picture class="infusion__img">
                         <source srcset="img/infusion-cola-de-caballo.webp" type="image/webp">
-                        <img src="img/infusion-cola-de-caballo.png" alt="Infusión de cola de caballo vista desde arriba y cola de caballo alrededor del vaso">
+                        <img src="img/infusion-cola-de-caballo.jpg" alt="Infusión de cola de caballo vista desde arriba y cola de caballo alrededor del vaso" loading="lazy">
                     </picture>
                 </div>
                 <!-- Infusión: alcachofa -->
@@ -194,7 +196,7 @@ Estructura general:
                     <!-- Imagen de la infusión alcachofa -->
                     <picture class="infusion__img reveal left">
                         <source srcset="img/infusion-alcachofa.webp" type="image/webp">
-                        <img src="img/infusion-alcachofa.png" alt="Una alcachofa partida por la mitad, una dentro de una taza">
+                        <img src="img/infusion-alcachofa.jpg" alt="Una alcachofa partida por la mitad, una dentro de una taza" loading="lazy">
                     </picture>
                     <section class="infusion__text">
                         <h3 class="infusion__h3 reveal down">Agua de Alcachofa</h3>
@@ -226,7 +228,7 @@ Estructura general:
                     <!-- Imagen de la infusión diente de león -->
                     <picture class="infusion__img reveal right">
                         <source srcset="img/infusion-diente-de-leon.webp" type="image/webp">
-                        <img src="img/infusion-diente-de-leon.png" alt="Vaso de cristal de diente de león con una flor dentro y una cuchara al lado">
+                        <img src="img/infusion-diente-de-leon.jpg" alt="Vaso de cristal de diente de león con una flor dentro y una cuchara al lado" loading="lazy">
                     </picture>
                 </div>
             </section>
@@ -238,7 +240,7 @@ Estructura general:
                     <!-- Imagen de la infusión tila -->
                     <picture class="infusion__img">
                         <source srcset="img/infusion-tila.webp" type="image/webp">
-                        <img src="img/infusion-tila.png" alt="Pequeña tetera transparente con tila">
+                        <img src="img/infusion-tila.jpg" alt="Pequeña tetera transparente con tila" loading="lazy">
                     </picture>
                     <section class="infusion__text">
                         <h3 class="infusion__h3 reveal down">Tila</h3>
@@ -269,7 +271,7 @@ Estructura general:
                     <!-- Imagen de la infusión valeriana -->
                     <picture class="infusion__img reveal right">
                         <source srcset="img/infusion-valeriana.webp" type="image/webp">
-                        <img src="img/infusion-valeriana.png" alt="Taza transparente con valeriana líquida y en flor">
+                        <img src="img/infusion-valeriana.jpg" alt="Taza transparente con valeriana líquida y en flor" loading="lazy">
                     </picture>
                 </div>
                 <!-- Infusión: melisa -->
@@ -277,7 +279,7 @@ Estructura general:
                     <!-- Imagen de la infusión melisa -->
                     <picture class="infusion__img reveal left">
                         <source srcset="img/infusion-melisa.webp" type="image/webp">
-                        <img src="img/infusion-melisa.png" alt="Infusión de melisa en un vaso de cristal">
+                        <img src="img/infusion-melisa.jpg" alt="Infusión de melisa en un vaso de cristal" loading="lazy">
                     </picture>
                     <section class="infusion__text">
                         <h3 class="infusion__h3 reveal down">Melisa</h3>
@@ -306,7 +308,7 @@ Estructura general:
                     <!-- Imagen de la infusión lavanda -->
                     <picture class="infusion__img reveal right">
                         <source srcset="img/infusion-lavanda.webp" type="image/webp">
-                        <img src="img/infusion-lavanda.png" alt="Taza de color rosa con infusión de lavanda y flores de lavanda alrededor">
+                        <img src="img/infusion-lavanda.jpg" alt="Taza de color rosa con infusión de lavanda y flores de lavanda alrededor" loading="lazy">
                     </picture>
                 </div>
             </section>

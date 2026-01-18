@@ -1,11 +1,11 @@
 /**
- * Descripción: 
+ * Descripción:
  * Este archivo JavaScript contiene la lógica Infusea.
- *
  * Funciones:
  * - Slider automático con navegación por puntos
  * - Acordeón para la sección de preguntas frecuentes
  * - Animaciones al entrar elementos en el viewport
+ * - Activación de clase según scroll e id
  */
 
 //Funcion Anonima IIFE
@@ -17,17 +17,16 @@
   __________________________________________________________*/
 
   //Agrupa todos los slides
-  const wrapper = document.querySelector('.slides__wrapper');
+  const wrapper = document.querySelector(".slides__wrapper");
   // Conjunto de slides
-  const slides = document.querySelectorAll('.my__slides');
+  const slides = document.querySelectorAll(".my__slides");
   // Navegación
-  const dots = document.querySelectorAll('.dot');
-
+  const dots = document.querySelectorAll(".dot");
 
   /**
-  * comprobación de si el slider existe,
-  * evita errores en las demás páginas(infusiones, tés, contacto y matcha).
-  */
+   * comprobación de si el slider existe,
+   * evita errores en las demás páginas(infusiones, tés, contacto y matcha).
+   */
   if (wrapper && slides.length > 0) {
     let index = 0;
 
@@ -36,12 +35,12 @@
 
     //Mostrar imagen segun el dot seleccionado
     function currentSlide(n) {
-      slideIndex = n - 1;
+      let slideIndex = n - 1;
       // Desplazamiento del slider a la posición correspondiente
-      wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;    //Desplazar el slider
+      wrapper.style.transform = `translateX(-${slideIndex * 100}%)`; //Desplazar el slider
       // Actualización del estado visual de los dots
-      dots.forEach(dot => dot.classList.remove('active'));              //Quitar la clase active de todos los dots
-      dots[slideIndex].classList.add('active');                         //Agregar la clase active al dot seleccionado
+      dots.forEach((dot) => dot.classList.remove("active")); //Quitar la clase active de todos los dots
+      dots[slideIndex].classList.add("active"); //Agregar la clase active al dot seleccionado
     }
 
     // Se expone la función para poder ser usada desde el HTML
@@ -54,22 +53,22 @@
     setInterval(() => {
       index++;
 
-      wrapper.style.transition = 'transform 2s ease';
+      wrapper.style.transition = "transform 2s ease";
       wrapper.style.transform = `translateX(-${index * 100}%)`;
 
       // Actualización de dots activos
-      dots.forEach(dot => dot.classList.remove('active'));
-      if (dots[index]) dots[index].classList.add('active');
+      dots.forEach((dot) => dot.classList.remove("active"));
+      if (dots[index]) dots[index].classList.add("active");
 
       /**
        * Reinicio del slider al llegar a la última slide
        */
       if (index === slides.length) {
         setTimeout(() => {
-          wrapper.style.transition = 'none';
-          wrapper.style.transform = 'translateX(0)';
+          wrapper.style.transition = "none";
+          wrapper.style.transform = "translateX(0)";
           index = 0;
-          dots[0].classList.add('active');
+          dots[0].classList.add("active");
         }, 2000);
       }
     }, 6000);
@@ -80,34 +79,34 @@
     Descripción: Controla la apertura y cierre de los bloques de preguntas,
     mostrando solo uno activo a la vez.
     __________________________________________________________ */
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Bloques completos del acordeón
-    const bloque = document.querySelectorAll('.bloque');
+    const bloque = document.querySelectorAll(".bloque");
     // Títulos clicables del acordeón
-    const h3 = document.querySelectorAll('.h3');
+    const h3 = document.querySelectorAll(".h3");
     /**
      * Recorre y asigna un evento click a cada título para activar
      * su bloque correspondiente
      */
     h3.forEach((cadah2, i) => {
-      cadah2.addEventListener('click', () => {
+      cadah2.addEventListener("click", () => {
         // Se desactivan todos los bloques
-        bloque.forEach(cadaBloque => {
-          cadaBloque.classList.remove('activo')
-        })
+        bloque.forEach((cadaBloque) => {
+          cadaBloque.classList.remove("activo");
+        });
         // Se activa el bloque seleccionado
-        bloque[i].classList.add('activo')
-      })
-    })
-  })
+        bloque[i].classList.add("activo");
+      });
+    });
+  });
   /* __________________________________________________________
      ANIMACIONES AL ENTRAR EN EL VIEWPORT
      Descripción: Aplica animacion de opacidad y desplazamiento a los elementos cuando entran
      en la zona visible de la pantalla, un 20%.
      __________________________________________________________ */
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Elementos que deben animarse al entrar en el viewport
-    const reveals = document.querySelectorAll('.reveal');
+    const reveals = document.querySelectorAll(".reveal");
 
     /**
      * Observador que detecta cuándo un elemento
@@ -115,10 +114,10 @@
      */
     const observer = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Se activa la animación del elemento
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
             // Se deja de observar una vez animado
             observer.unobserve(entry.target);
           }
@@ -126,13 +125,37 @@
       },
       {
         /**
-     * threshold: Indica el porcentaje del elemento que debe ser visible en el viewport para activar la animación.
-     * En este caso, se activa cuando al menos el 20% es visible.
-     */
+         * threshold: Indica el porcentaje del elemento que debe ser visible en el viewport para activar la animación.
+         * En este caso, se activa cuando al menos el 20% es visible.
+         */
         threshold: 0.2,
-      }
+      },
     );
     // Se observa cada elemento con clase "reveal"
-    reveals.forEach(el => observer.observe(el));
+    reveals.forEach((el) => observer.observe(el));
   });
+
+  /* __________________________________________________________
+     DEJAR ACTIVA BENEFICIOS- 
+     Descripción: Aplica una clase active cuando se selecciona un enlace por id.
+     __________________________________________________________ */
+
+  //Secciones con id con submenu
+  const benefits = document.querySelectorAll("section[id]");
+  //Enlaces de submenu
+  const link = document.querySelectorAll(".submenu__a");
+
+  if (benefits.length && link.length) {
+    //Escucha el evento
+    addEventListener("scroll", () => {
+      //Convierte nodelist en array, comprueba desde abajo, devuelve la primera sección de la condicion, obtiene la id de la sección
+      let benefit = [...benefits]
+        .reverse()
+        .find((scroll) => scrollY >= scroll.offsetTop - 120)?.id;
+      //Recorre todas las secciones y añade la clase activa si coincide el hash con el enlace
+      link.forEach((clas) =>
+        clas.classList.toggle("active", clas.hash === `#${benefit}`),
+      );
+    });
+  }
 })();

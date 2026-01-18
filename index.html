@@ -15,8 +15,10 @@ Estructura general:
     <!-- Título -->
     <title>Infusea - Ritual del té - Página principal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Infusea es una web informativa sobre tés e infusiones, sus beneficios y formas de preparación.">
+    <meta name="author" content="Marina Ramos Ruiz">
     <!-- Icono que se muestra en la pestaña del navegador-->
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Archivo JavaScript uso de "defer" para no bloquear el renderizado -->
@@ -34,8 +36,8 @@ Estructura general:
     Descripción: Contiene el logotipo de la marca y la navegación principal del sitio, adaptada a dispositivos móviles mediante menú hamburguesa.-->
     <header class="sidebar">
         <!-- Logotipo que redirige a la página principal -->
-        <a href="index.html" class="sidebar__logo">
-            <img src="img/infusea.svg" alt="Logotipo infusea">
+        <a href="index.html" class="sidebar__logo" title="Logotipo infusea">
+            <img src="img/infusea.svg" alt="Logotipo infusea" loading="lazy">
         </a>
 
         <!-- Checkbox invisible, usado para controlar apertura y cierre del menu en responsive -->
@@ -49,10 +51,10 @@ Estructura general:
          Contiene los enlaces a las secciones principales del sitio -->
         <nav class="nav">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="tes.html" class="sidebar__a">Tes</a></li>
-                <li class="sidebar__li"><a href="infusiones.html" class="sidebar__a">Infusiones</a></li>
-                <li class="sidebar__li"><a href="matcha.html" class="sidebar__a">Té matcha</a></li>
-                <li class="sidebar__li"><a href="contacto.html" class="sidebar__a">Contacto</a></li>
+                <li class="sidebar__li"><a href="tes.html" class="sidebar__a" title="Sección de tés">Tes</a></li>
+                <li class="sidebar__li"><a href="infusiones.html" class="sidebar__a" title="Sección de infusiones">Infusiones</a></li>
+                <li class="sidebar__li"><a href="matcha.html" class="sidebar__a" title="Sección de té matcha">Té matcha</a></li>
+                <li class="sidebar__li"><a href="contacto.html" class="sidebar__a" title="Sección de contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -67,8 +69,7 @@ Estructura general:
                     <h2 class="slider__text reveal up">Un ritual para cada momento</h2>
                     <picture>
                         <source srcset="img/slider-center.webp" type="image/webp">
-                        <img src="img/slider-center.png" alt="Fondo gris oscuro con tetera, hojas y té"
-                            loading="lazy">
+                        <img src="img/slider-center.jpg" alt="Fondo gris oscuro con tetera, hojas y té" loading="lazy">
                     </picture>
 
                 </div>
@@ -77,9 +78,7 @@ Estructura general:
                     <h2 class="slider__text reveal up">Sabores naturales que cuidan de ti</h2>
                     <picture>
                         <source srcset="img/slider-up.webp" type="image/webp">
-                        <img src="img/slider-up.png"
-                            alt="Fondo gris oscuro con tetera, hojas y té, posicionado arriba"
-                            loading="lazy">
+                        <img src="img/slider-up.jpg" alt="Fondo gris oscuro con tetera, hojas y té, posicionado arriba" loading="lazy">
                     </picture>
 
                 </div>
@@ -88,7 +87,7 @@ Estructura general:
                     <h2 class="slider__text reveal up">Bienestar en cada sorbo</h2>
                     <picture>
                         <source srcset="img/slider-right.webp" type="image/webp">
-                        <img src="img/slider-right.png" alt="Fondo gris oscuro con tetera, hojas y té, posicionado abajo a la derecha" loading="lazy">
+                        <img src="img/slider-right.jpg" alt="Fondo gris oscuro con tetera, hojas y té, posicionado abajo a la derecha" loading="lazy">
                     </picture>
 
                 </div>
@@ -109,32 +108,32 @@ Estructura general:
                 <!-- Imagen de la sección beneficios -->
                 <picture class="benefits__img reveal left">
                     <source src="img/benefits.webp" type="img/webp">
-                    <img src="img/benefits.png" alt="Taza de té boca arriba y hojas de melisa alrededor, tiene transparecia">
+                    <img src="img/benefits.png" alt="Taza de té boca arriba y hojas de melisa alrededor, tiene transparecia" loading="lazy">
                 </picture>
                 <!-- Tarjetas de beneficios -->
                 <div class="benefits__cards">
                     <!-- Tarjeta 1 -->
                     <div class="benefits__card reveal right">
-                        <img src="img/icon-plant.png" alt="Icono verde de una maceta con planta">
+                        <img src="img/icon-plant.png" alt="Icono verde de una maceta con planta" loading="lazy">
                         <h3>Ricas en antioxidantes</h3>
                         <p>Ayudan a combatir el estrés oxidativo y contribuyen al cuidado del sistema cardiovascular y
                             la piel</p>
                     </div>
                     <!-- Tarjeta 2 -->
                     <div class="benefits__card reveal right">
-                        <img src="img/icon-water.png" alt="Icono verde, una gota de agua">
+                        <img src="img/icon-water.png" alt="Icono verde, una gota de agua" loading="lazy">
                         <h3>Hidratación sin calorías</h3>
                         <p>Alternativa al café o a bebidas azucaradas: hidratan y casi no aportan calorías</p>
                     </div>
                     <!-- Tarjeta 3 -->
                     <div class="benefits__card reveal right">
-                        <img src="img/icon-liver.png" alt="Icono verde, de un hígado">
+                        <img src="img/icon-liver.png" alt="Icono verde, de un hígado" loading="lazy">
                         <h3>Mejoran digestión</h3>
                         <p>Ayudan a reducir la hinchazón, los gases y la pesadez después de comer</p>
                     </div>
                     <!-- Tarjeta 4 -->
                     <div class="benefits__card reveal right">
-                        <img src="img/icon-cup.png" alt="Icono verde, de una taza">
+                        <img src="img/icon-cup.png" alt="Icono verde, de una taza" loading="lazy">
                         <h3>Relaja o estimula</h3>
                         <p>Algunas ayudan a relajarte y dormir mejor, mientras que otras aportan energía y concentración
                         </p>

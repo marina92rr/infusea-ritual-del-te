@@ -18,8 +18,10 @@ Estructura general:
     <!-- Título -->
     <title>Infusea - Ritual del té - té matcha</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Conoce qué es el té matcha, cómo se prepara y cuáles son sus beneficios.">
+    <meta name="author" content="Marina Ramos Ruiz">
     <!-- Icono que se muestra en la pestaña del navegador-->
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Archivo JavaScript uso de "defer" para no bloquear el renderizado -->
@@ -38,8 +40,8 @@ Estructura general:
     Descripción: Contiene el logotipo de la Infusea y la navegación principal del sitio-->
     <header class="sidebar">
         <!-- Logotipo que redirige a la página principal -->
-        <a href="index.html" class="sidebar__logo">
-            <img src="img/infusea.svg" alt="Logotipo infusea">
+        <a href="index.html" class="sidebar__logo" title="Logotipo infusea">
+            <img src="img/infusea.svg" alt="Logotipo infusea" loading="lazy">
         </a>
 
         <!-- Checkbox invisible, usado para controlar apertura y cierre del menu en responsive -->
@@ -53,10 +55,10 @@ Estructura general:
          Descripción: Contiene los enlaces a las secciones principales del sitio -->
         <nav class="nav">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="tes.html" class="sidebar__a">Tes</a></li>
-                <li class="sidebar__li"><a href="infusiones.html" class="sidebar__a">Infusiones</a></li>
-                <li class="sidebar__li"><a href="matcha.html" class="sidebar__a">Té matcha</a></li>
-                <li class="sidebar__li"><a href="contacto.html" class="sidebar__a">Contacto</a></li>
+                <li class="sidebar__li"><a href="tes.html" class="sidebar__a" title="Sección de tés">Tes</a></li>
+                <li class="sidebar__li"><a href="infusiones.html" class="sidebar__a" title="Sección de infusiones">Infusiones</a></li>
+                <li class="sidebar__li"><a href="matcha.html" class="sidebar__a a--active" title="Sección de té matcha">Té matcha</a></li>
+                <li class="sidebar__li"><a href="contacto.html" class="sidebar__a" title="Sección de contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -66,9 +68,9 @@ Estructura general:
         Descripción: Permite desplazarse a las diferentes secciones informativas del artículo sobre el té matcha -->
         <nav class="submenu">
             <ul class="submenu__ul">
-                <li class="submenu__li"><a class="submenu__a" href="#whatis">¿Qué es?</a></li>
-                <li class="submenu__li"><a class="submenu__a" href="#prepare">Preparación</a></li>
-                <li class="submenu__li"><a class="submenu__a" href="#benefits">Beneficios</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#whatis" title="Apartado ¿Qué es el té matcha?">¿Qué es?</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#prepare" title="Apartado preparación">Preparación</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#benefits" title="Apartado beneficios">Beneficios</a></li>
             </ul>
         </nav>
        <!-- Artículo principal 
@@ -86,7 +88,7 @@ Estructura general:
                     <!-- Imagen de té matcha -->
                     <figure class="reveal left">
                         <source srcset="img/matcha.webp" type="image/webp">
-                        <img src="img/matcha.png" alt="Imagen de té matcha en taza y en cuenco">
+                        <img src="img/matcha.jpg" alt="Imagen de té matcha en taza y en cuenco" loading="lazy">
                     </figure>
                     <p class="reveal right">El té matcha comenzó a beberse en China durante la dinastía Song (960-1279).
                         En ese período, hubo una gran ola de inmigrantes japoneses que viajaban a China a aprender una
@@ -108,7 +110,8 @@ Estructura general:
                     <!--
                     Vídeo explicativo del proceso de preparación del té matcha
                     -->
-                    <video class="reveal up" autoplay muted loop playsinline>
+                    <video class="reveal up" autoplay muted loop playsinline preload="none">
+                        <source src="img/preparar-te-matcha.webm" type="video/webm">
                         <source src="img/preparar-te-matcha.mp4" type="video/mp4">
                     </video>
                     <div class="steps reveal right">

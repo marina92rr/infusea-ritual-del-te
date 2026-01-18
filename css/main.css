@@ -1,8 +1,4 @@
-/* 
-   RESET GENERAL
-   Descripción: Normaliza los estilos base del navegador y define
-   una base visual consistente para todo el sitio.
-    */
+/* RESET GENERAL*/
 * {
     margin: 0;
     padding: 0;
@@ -10,22 +6,35 @@
     list-style: none;
     text-decoration: none;
     border: none;
-    color: black;
+    color: var(--text);
     box-sizing: border-box;
 }
 
-/* VARIABLES CSS
-   Descripción: Definen la paleta de colores principal del sitio */
+/* VARIABLES CSS */
 :root {
-    --primary: #6e9f32;
-    --secondary: #2e4133;
-    --text: #282d29;
-    --gray: #333333;
+  /* COLORES BASE RGB para transparencias*/
+  --primary-rgb: 110 159 50;
+  --secondary-rgb: 46 65 51; 
+  --text-rgb: 40 45 41;   
+
+  /* COLORES NEUTROS */
+  --white: #ffffff;
+  --gray: #f4f4f4; 
+
+  /* Imprescindibles */
+  --primary: rgb(var(--primary-rgb));
+  --secondary: rgb(var(--secondary-rgb));
+  --text: rgb(var(--text-rgb));
 }
 
 html,
 body {
     scroll-behavior: smooth;
+    overflow-x: clip;
+}
+
+section[id] {
+  scroll-margin-top: 5rem; /* ajusta a la altura del header/submenu */
 }
 
 h1 {
@@ -36,10 +45,9 @@ h1 {
     text-shadow: 0 0 .2rem #2e413334;
 }
 
-/* HEADER / SIDEBAR
-   Descripción: Barra de navegación principal de Infusea */
+/* HEADER / SIDEBAR */
 .sidebar {
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     width: 100%;
     z-index: 3;
@@ -48,7 +56,7 @@ h1 {
     justify-content: space-around;
 
     padding: 1rem;
-    height: 70px;
+    height: 4.375rem;
 
     position: relative;
     /* clave para el desplegable */
@@ -56,7 +64,7 @@ h1 {
 
 /* Logotipo */
 .sidebar__logo img {
-    width: 60px;
+    width: 3.75rem;
     display: block;
 }
 
@@ -66,7 +74,7 @@ h1 {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--white);
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -75,17 +83,26 @@ h1 {
 /* Enlaces del menú */
 .sidebar__a {
     display: block;
-    padding: 20px 20px;
-    text-decoration: none;
+    padding: 1.25rem;
     font-weight: bold;
     color: var(--secondary);
     width: 100%;
-        border-top: 1px solid #f4f4f4;
+    border-top: 1px solid var(--gray);
 }
+
+.sidebar__a:hover {
+    color: var(--primary);
+}
+
+/* ENLACE ACTIVO */
+.sidebar__a.a--active {
+    color: var(--primary);
+}
+
 
 /* MENÚ RESPONSIVE*/
 .nav {
-    background-color: #fff;
+    background-color: var(--white);
     clear: both;
     max-height: none;
     transition: max-height .2s ease-out;
@@ -95,7 +112,7 @@ h1 {
 .menu-icon {
     cursor: pointer;
     display: none;
-    padding: 28px 20px;
+    padding: 1.75rem 1.25rem;
     position: relative;
     user-select: none;
 
@@ -107,27 +124,27 @@ h1 {
     height: .125rem;
     position: relative;
     transition: background .2s ease-out;
-    width: 18px;
+    width: 1.125rem;
 }
 
 /* Líneas superior e inferior del icono */
 .menu-icon .navicon:before,
 .menu-icon .navicon:after {
-    background: var(--gray);
+    background: var(--primary);
     content: '';
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out;
     width: 100%;
 }
 
 .menu-icon .navicon:before {
-    top: 5px;
+    top: .3125rem;
 }
 
 .menu-icon .navicon:after {
-    top: -5px;
+    top: -0.3125rem;
 }
 
 /* Checkbox oculto que controla el menú */
@@ -139,7 +156,6 @@ h1 {
 @media (max-width: 48em) {
     .menu-icon {
         display: inline-block;
-
     }
 
     .sidebar {
@@ -150,10 +166,10 @@ h1 {
     /* Menú desplegable */
     .nav {
         position: absolute;
-        top: 70px;
+        top: 4.375rem;
         left: 0;
         width: 100%;
-        background-color: #fff;
+        background-color: var(--white);
 
         max-height: 0;
         /* cerrado */
@@ -169,7 +185,7 @@ h1 {
 
     /* cuando el checkbox está activo */
     .menu-toggle:checked~.nav {
-        max-height: 240px;
+        max-height: 15rem;
     }
 
     /* Animación icono a X */
@@ -200,14 +216,13 @@ h1 {
 
 /*Altura mínima del cuerpo principal de las páginas*/
 main {
-    min-height: calc(100vh - 140px);
+    min-height: calc(100vh - 8.75rem);
 }
-
 
 /* INICIO SLIDER */
 .slideshow__container {
     width: 100%;
-    height: calc(100vh - 140px);
+    height: calc(100vh - 8.75rem);
     overflow: hidden;
     position: relative;
 }
@@ -249,16 +264,16 @@ main {
 .slider__nav {
     text-align: center;
     position: absolute;
-    bottom: 100px;
+    bottom: 6.25rem;
     width: 100%;
 }
 /* Botones del slider */
 .dot {
     cursor: pointer;
     height: .7rem;
-    width: 10px;
+    width: .625rem;
     margin: 0 .125rem;
-    background-color: #ffffff;
+    background-color: var(--white);
     opacity: .5;
     border-radius: 50%;
     display: inline-block;
@@ -268,7 +283,7 @@ main {
 .active,
 .dot:hover {
     opacity: 1;
-    background-color: #6e9f32;
+    background-color: var(--primary);
 }
 
 .fade {
@@ -309,7 +324,7 @@ main {
 }
 
 .benefits__img {
-    max-width: 500px;
+    max-width: 31.25rem;
 }
 
 .benefits__img img {
@@ -331,7 +346,7 @@ main {
 
 .benefits__card {
     text-align: center;
-    background-color: white;
+    background-color: var(--white);
     width: 16rem;
     height: 15.625rem;
     padding: 1rem;
@@ -362,13 +377,13 @@ main {
 }
 
 .questions .bloque {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 1rem;
     padding: .5rem;
 }
 
 .questions .h3 {
-    background-color: #6e9f3240;
+    background-color: rgb(var(--primary-rgb) / 0.25);
     cursor: pointer;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.138);
     border-radius: .5rem;
@@ -376,20 +391,27 @@ main {
 }
 
 .questions .contenido {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: all .5s ease;
-    background-color: white;
+    opacity: 0;
+    transform: translateY(-10px);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+
+    background-color: var(--white);
 }
 
 .questions .bloque.activo .contenido {
-    height: auto;
+    max-height: 500px;     /* suficiente para el contenido */
+    opacity: 1;
+    transform: translateY(0);
     padding: 2rem;
 }
 
 /* INFUSIONES Y TÉS
-   Descripción: Estilos compartidos para las páginas de Infusiones y Tés, compuesto por submenús, títulos, secciones y comportamiento responsive.*/
-/* SUBMENÚ DE NAVEGACIÓN */
+SUBMENÚ DE NAVEGACIÓN */
 .submenu {
     position: sticky;
     top: 0;
@@ -408,15 +430,25 @@ main {
     gap: 2rem;
 }
 
-.submenu__ul li a {
-    color: white;
+.submenu__a {
+    color: var(--white);
     font-weight: bold;
 }
 
-.submenu__ul li a:hover {
-    color: #46644e;
+.submenu__a:hover {
+    color: var(--secondary);
     font-weight: bold;
 }
+
+.submenu__a.active {
+     color: var(--secondary);
+    font-weight: bold;
+}
+
+
+
+
+
 
 /* TÍTULOS CON IMAGEN DE FONDO */
 .title {
@@ -426,18 +458,18 @@ main {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: inset 0 -15px 25px rgba(0, 0, 0, .12);
+    box-shadow: inset 0 -.9375rem 1.5625rem rgba(0, 0, 0, .12);
 }
 
 /* Fondo específico para el título la página de Tés */
 .title.title--tes {
-    background-image: url(../img/fond-te.png);
+    background-image: url(../img/fond-te.jpg);
     background-position: center;
 }
 
 /* Fondo específico para el título la página de Infusiones */
 .title.title--infusiones {
-    background-image: url(../img/fond-infusion.png);
+    background-image: url(../img/fond-infusion.jpg);
     background-position: center;
 
 }
@@ -457,11 +489,11 @@ main {
 
 /* DECORACIÓN DE CURVAS - para los fondos de los titulos y secciones*/
 .elipse--up {
-    clip-path: ellipse(120% 99% at 50% 100%);
+    clip-path: ellipse(150% 100% at 50% 100%);
 }
 
 .elipse--down {
-    clip-path: ellipse(100% 99% at 50% 0%);
+    clip-path: ellipse(150% 100% at 50% 0%);
 }
 
 /* Contenedor de tés e infusiones(sección e imagen) */
@@ -475,13 +507,13 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: #6e9f3212;
+    background-color:rgb(var(--primary-rgb) / 0.25);
 
 }
 
 .te--color,
 .infusion--color {
-    background-color: #6e9f3235;
+    background-color: rgb(var(--primary-rgb) / 0.07);;
 }
 
 /*TEXTO DE LAS SECCIONES (h3 - p - ul) */
@@ -494,7 +526,7 @@ main {
 .te__text h3,
 .infusion__text h3 {
     margin: 2rem 0;
-    color: #25352990;
+    color: rgb(var(--secondary-rgb) / 0.56);
     font-size: clamp(2em, 2vw, 6em);
 }
 
@@ -531,9 +563,8 @@ main {
     display: block;
 }
 
-/* MEDIA QUERY - MÓVIL
-Descripción: Reorganiza el orden de los elementos. el orden es título, imagen y texto */
-@media (max-width: 768px) {
+/* MEDIA QUERY - MÓVIL*/
+@media (max-width: 48rem) {
 
     .te,
     .infusion {
@@ -569,9 +600,7 @@ Descripción: Reorganiza el orden de los elementos. el orden es título, imagen 
     }
 }
 
-/* SECCIÓN MATCHA
-   Descripción: Estilos específicos para la página de Té Matcha, incluyendo fondo, contenedor principal, pasos y beneficios. */
-
+/* SECCIÓN MATCHA */
 .matcha {
     padding: 1rem 0;
     background-image: url(../img/fond-matcha.jpg);
@@ -580,12 +609,11 @@ Descripción: Reorganiza el orden de los elementos. el orden es título, imagen 
     background-repeat: no-repeat;
 }
 
-/* CONTENIDO MATCHA
-Descripción: Uso una caja con ancho de 70% para visualizar el fondo de la clase .matcha */
+/* CONTENIDO MATCHA */
 .matcha__box {
     margin: 0 auto;
     padding: 3rem;
-    background-color: white;
+    background-color: var(--white);
     width: 70%;
     border-radius: 2rem;
     box-shadow: 0 0 20rem rgba(0, 0, 0, 0.407);
@@ -612,8 +640,7 @@ Descripción: Uso una caja con ancho de 70% para visualizar el fondo de la clase
     border-radius: 1rem;
 }
 
-/* PASOS DEL TE MATCHA
-descripción: Son cajas con bordes redondeados, en flex y wrap para ajustarse en modo responsive*/
+/* PASOS DEL TE MATCHA */
 .steps {
     margin: 2rem 0;
     display: flex;
@@ -623,20 +650,19 @@ descripción: Son cajas con bordes redondeados, en flex y wrap para ajustarse en
 
 .step {
     width: 15.625rem;
-    background-color: #2e413361;
+    background-color: rgb(var(--secondary-rgb) / 0.38);
     border-radius: 1rem;
     margin: 1rem;
     padding: 1rem;
 }
 
 .step h3 {
-    color: #2e4133bd;
+    color: rgb(var(--secondary-rgb) / 0.74);
     margin: 1rem 0;
     text-align: center;
 }
 
-/* BENEFICIOS MATCHA
-Descripción: ajuste del listado desordenado hacia la derecha */
+/* BENEFICIOS MATCHA */
 .benefits__ul li {
     list-style: disc;
     list-style-position: inside;
@@ -648,22 +674,20 @@ Descripción: ajuste del listado desordenado hacia la derecha */
 
 }
 
-/* MEDIA QUERY - MÓVIL (MATCHA)
-    Descripción: Ajusta el ancho del contenedor al 85% y mejora la legibilidad en dispositivos con pantallas pequeñas. */
-@media (max-width: 500px) {
+/* MEDIA QUERY - MÓVIL (MATCHA) */
+@media (max-width: 31.25rem) {
     .matcha__box {
         width: 85%;
         padding: 1rem;
     }
 
     .matcha h1 {
-        color: white;
+        color: var(--white);
         text-shadow: .1rem .1rem .4rem rgba(0, 0, 0, 0.167);
     }
 }
 
-/* SECCIÓN CONTACTO
-    Descripción: Estilos de la página de contacto, incluyendo formulario, imagen y mapa de localización. */
+/* SECCIÓN CONTACTO */
 .contact {
     width: 60%;
     margin: 0 auto;
@@ -688,11 +712,11 @@ input,
 textarea,
 button,
 .contact__img {
-  width: 21.875rem;
+  width: 100%;
+  max-width: 21.875rem;
 }
 
-/* ETIQUETAS OCULTAS (ACCESIBILIDAD)
-   Descripción: El label esta oculto pero se mantiene accesibles para lectores de pantalla. */
+/* ETIQUETAS OCULTAS (ACCESIBILIDAD) */
 label {
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -706,7 +730,7 @@ textarea {
     margin: 1rem 0;
     display: flex;
     padding: .7rem;
-    background-color: #6e9f3240;
+    background-color: rgb(var(--primary-rgb) / 0.19);
     border-radius: .4rem;
 }
 
@@ -714,18 +738,17 @@ textarea {
 button {
     padding: .7rem;
     background-color: var(--primary);
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: .4rem;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #6e9f32c7;
+    background-color: var(--primary);
 }
 
 .contact__img {
-
     width: 21.875rem;
 }
 
@@ -738,18 +761,23 @@ button:hover {
 /* MAPA DE LOCALIZACIÓN */
 .map {
     text-align: center;
+    margin: 4rem 0;
+}
+
+.map a{
+    color: var(--primary);
+    text-decoration: none;
 }
 
 .map iframe {
     width: 60%;
-    height: 200px;
+    height: 12.5rem;
     margin: 5rem 0;
     border-radius: 1rem;
-    box-shadow: .4rem .4rem 1rem #2e413330;
+    box-shadow: .4rem .4rem 1rem rgb(var(--primary-rgb) / 0.19);
 }
 
-/* MEDIA QUERY - CONTACTO (MÓVIL)
-   Descripción: Ajusta anchos y márgenes para mejorar la visualización en pantallas pequeñas. */
+/* MEDIA QUERY - CONTACTO (MÓVIL) */
 @media (max-width:48em) {
     .contact {
         width: 100%;
@@ -762,14 +790,12 @@ button:hover {
     }
 }
 
-/* PIE DE LA PAGINA
-   Descripción: Dimensiones y colores del pie de las páginas*/
+/* PIE DE LA PAGINA */
 footer {
-    height: 70px;
+    height: 4.375rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     background-color: var(--secondary);
 }
 
@@ -788,19 +814,19 @@ footer p {
 }
 
 .reveal.up {
-    transform: translateY(40px);
+    transform: translateY(2.5rem);
 }
 
 .reveal.down {
-    transform: translateY(-40px);
+    transform: translateY(-2.5rem);
 }
 
 .reveal.left {
-    transform: translateX(-40px);
+    transform: translateX(-2.5rem);
 }
 
 .reveal.right {
-    transform: translateX(40px);
+    transform: translateX(2.5rem);
 }
 
 .reveal.visible {

@@ -13,10 +13,12 @@ Estructura general:
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Título -->
-    <title>Infusea - Ritual del té - infusiones</title>
+    <title>Infusea - Ritual del té - tes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Descubre los diferentes tipos de tés.">
+    <meta name="author" content="Marina Ramos Ruiz">
     <!-- Icono que se muestra en la pestaña del navegador-->
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Archivo JavaScript uso de "defer" para no bloquear el renderizado -->
@@ -34,8 +36,8 @@ Estructura general:
     Descripción: Contiene el logotipo de la marca y la navegación principal del sitio, adaptada a dispositivos móviles mediante menú hamburguesa.-->
     <header class="sidebar">
         <!-- Logotipo que redirige a la página principal -->
-        <a href="index.html" class="sidebar__logo">
-            <img src="img/infusea.svg" alt="Logotipo infusea">
+        <a href="index.html" class="sidebar__logo" title="Logotipo infusea">
+            <img src="img/infusea.svg" alt="Logotipo infusea" loading="lazy">
         </a>
 
         <!-- Checkbox invisible, usado para controlar apertura y cierre del menu en responsive -->
@@ -49,10 +51,10 @@ Estructura general:
          Descripción: Contiene los enlaces a las secciones principales del sitio -->
         <nav class="nav">
             <ul class="sidebar__ul">
-                <li class="sidebar__li"><a href="tes.html" class="sidebar__a">Tes</a></li>
-                <li class="sidebar__li"><a href="infusiones.html" class="sidebar__a">Infusiones</a></li>
-                <li class="sidebar__li"><a href="matcha.html" class="sidebar__a">Té matcha</a></li>
-                <li class="sidebar__li"><a href="contacto.html" class="sidebar__a">Contacto</a></li>
+                <li class="sidebar__li"><a href="tes.html" class="sidebar__a a--active" title="Sección de tés">Tes</a></li>
+                <li class="sidebar__li"><a href="infusiones.html" class="sidebar__a" title="Sección de infusiones">Infusiones</a></li>
+                <li class="sidebar__li"><a href="matcha.html" class="sidebar__a" title="Sección de té matcha">Té matcha</a></li>
+                <li class="sidebar__li"><a href="contacto.html" class="sidebar__a" title="Sección de contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -62,9 +64,9 @@ Estructura general:
         Descripción: Permite filtrar el contenido de tés según sus beneficios.-->        
         <nav class="submenu">
             <ul class="submenu__ul">
-                <li class="submenu__li"><a class="submenu__a" href="#tantiinflamatorio">Antiinflamatorio</a></li>
-                <li class="submenu__li"><a class="submenu__a" href="#tenergizante">Energizante</a></li>
-                <li class="submenu__li"><a class="submenu__a" href="#tmatcha">Té matcha</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#tantiinflamatorio" title="Beneficio antiinflamatorio">Antiinflamatorio</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#tenergizante" title="Beneficio energizante">Energizante</a></li>
+                <li class="submenu__li"><a class="submenu__a" href="#tmatcha" title="Beneficio matcha">Té matcha</a></li>
 
             </ul>
         </nav>
@@ -83,10 +85,7 @@ Estructura general:
                 <div class="te te--color elipse--up ">
                     <section class="te__text">
                         <h3 class="te__h3 reveal down">Té verde</h3>
-                        <p class="te__p reveal left">El té verde es una bebida ancestral, originaria de China, que se ha
-                            extendido por
-                            todo el mundo por su valor medicinal y nutricional. Se obtiene de las hojas de la planta
-                            Camellia sinensis. Las propiedades y beneficios más destacados son:</p>
+                        <p class="te__p reveal left">El té verde es una bebida ancestral, originaria de China, que se ha extendido por todo el mundo por su valor medicinal y nutricional. Se obtiene de las hojas de la planta Camellia sinensis. Las propiedades y beneficios más destacados son:</p>
                         <ul class="te__ul reveal right">
                             <li>Ayuda a combatir los radicales libres y el envejecimiento celular.</li>
                             <li>Reduce la inflamación crónica del organismo.</li>
@@ -98,7 +97,7 @@ Estructura general:
                     <!-- Imagen de la té verde -->
                     <picture class="te__img">
                         <source srcset="img/te-verde.webp" type="image/webp">
-                        <img  src="img/te-verde.png"
+                        <img  src="img/te-verde.jpg"
                             alt="vaso de cristal de te verde y una cuchara con hierba de te verde">
                     </picture>
                 </div>
@@ -107,14 +106,12 @@ Estructura general:
                     <!-- Imagen de la té blanco -->
                     <picture class="te__img reveal">
                         <source srcset="img/te-blanco.webp" type="image/webp">
-                        <img src="img/te-blanco.png" alt="vaso de cristal de te blanco, hojas secas y una manta blanca">
+                        <img src="img/te-blanco.jpg" alt="vaso de cristal de te blanco, hojas secas y una manta blanca" loading="lazy">
                     </picture>
 
                     <section class="te__text">
                         <h3 class="te__h3 reveal down">Té blanco</h3>
-                        <p class="te__p reveal left">El té blanco es mundialmente conocido por sus propiedades antioxidantes...
-                        </p>
-
+                        <p class="te__p reveal left">El té blanco es mundialmente conocido por sus propiedades antioxidantes, tanto es así que se le conoce como el elixir de la eterna juventud. Las propiedades y beneficios más destacados son:</p>
                         <ul class="te__ul reveal right">
                             <li>Reduce la presión sanguínea y ayuda a controlar el colesterol</li>
                             <li>Ayuda a mantener la línea y bajar peso</li>
@@ -127,7 +124,7 @@ Estructura general:
                 <div class="te te--color elipse--down">
                     <section class="te__text reveal down">
                         <h3 class="te__h3 reveal left">Té oolong</h3>
-                        <p class="te__p right">El té Oolong o té azul es una bebida que ha sido consumida por siglos...</p>
+                        <p class="te__p right">El té Oolong o té azul es una bebida que ha sido consumida por siglos en muchos países, concretamente en China y Taiwán. Algunos de los efectos positivos de este té, es la mejora del sistema cardiovascular hasta la reducción del riesgo de ciertos tipos de cáncer. Las propiedades y beneficios más destacados son:</p>
                         <ul class="te__ul">
                             <li>Ayuda a reducir el riesgo de enfermedades cardiovasculares</li>
                             <li>Contiene compuestos antioxidantes</li>
@@ -138,7 +135,7 @@ Estructura general:
                     <!-- Imagen de la té oolong -->
                     <picture class="te__img">
                         <source srcset="img/te-onloong.webp" type="image/webp">
-                        <img src="img/te-onloong.png" alt="taza de té oolong azul y marrón, un tazón de hierbas y 2 piezas de frutas">
+                        <img src="img/te-onloong.jpg" alt="taza de té oolong azul y marrón, un tazón de hierbas y 2 piezas de frutas" loading="lazy">
                     </picture>
                 </div>
             </section>
@@ -149,12 +146,12 @@ Estructura general:
                  <div class="te elipse--up">
                     <!-- Imagen de la té negro -->
                     <picture class="te__img">
-                        <source srcset="img/te-negro.png" type="image/webp">
-                        <img src="img/te-negro.png" alt="tetera de cristal de te negro">
+                        <source srcset="img/te-negro.webp" type="image/webp">
+                        <img src="img/te-negro.jpg" alt="tetera de cristal de te negro" loading="lazy">
                     </picture>
                     <section class="te__text reveal down">
                         <h3 class="te__h3 reveal left">Té Negro</h3>
-                        <p class="te__p">El té negro es una de las infusiones más consumidas en el mundo...</p>
+                        <p class="te__p">El té negro es una de las infusiones más consumidas en el mundo gracias a su sabor intenso, su versatilidad y sus numerosos beneficios para la salud. Las propiedades y beneficios más destacados son:</p>
 
                         <ul class="te__ul reveal right">
                             <li>Es una excelente alternativa al café</li>
@@ -168,7 +165,7 @@ Estructura general:
                 <!-- té: rojo -->                    
                  <section class="te__text">
                         <h3 class="te__h3 reveal down">Té Rojo</h3>
-                        <p class="te__p reveal left">Aunque en China se lleva consumiendo más de un milenio...</p>
+                        <p class="te__p reveal left">Aunque en China se lleva consumiendo más de un milenio, el té rojo ha comenzado a consumirse en Occidente hace tan solo un par de décadas. Parte de su popularidad se debe a su sabor y a su intenso color, pero también a que se le atribuyen propiedades curativas. Las propiedades y beneficios más destacados son:</p>
 
                         <ul class="te__ul reveal right">
                             <li>Propiedades diuréticas y aumento de energía</li>
@@ -179,20 +176,20 @@ Estructura general:
                     </section>
                     <!-- Imagen de la té rojo -->
                     <picture class="te__img reveal">
-                        <source srcset="img/te-rojo.png" type="image/webp">
-                        <img src="img/te-rojo.png" alt="vasos de te rojo y tetera transparente sobre una tabla de madera">
+                        <source srcset="img/te-rojo.webp" type="image/webp">
+                        <img src="img/te-rojo.jpg" alt="vasos de te rojo y tetera transparente sobre una tabla de madera" loading="lazy">
                     </picture>
                 </div>
                 <!-- té: romero -->
                 <div class="te elipse--down">
                     <!-- Imagen de la té romero -->
                     <picture class="te__img">
-                        <source srcset="img/te-romero.png" type="image/webp">
-                        <img src="img/te-romero.png" alt="te de romero de color amarillo y hojas de romero">
+                        <source srcset="img/te-romero.webp" type="image/webp">
+                        <img src="img/te-romero.jpg" alt="te de romero de color amarillo y hojas de romero" loading="lazy">
                     </picture>
                     <section class="te__text reveal down">
                         <h3 class="te__h3 reveal left">Té de Romero</h3>
-                        <p class="te__p reveal right">El té de romero se prepara a partir de la planta Rosmarinus officinalis...
+                        <p class="te__p reveal right">El té de romero se prepara a partir de la planta Rosmarinus officinalis, y puede combinarse con otros ingredientes como canela o limón para potenciar su sabor y sus propiedades. Las propiedades y beneficios más destacados son:
                         </p>
 
                         <ul class="te__ul">
@@ -211,7 +208,7 @@ Estructura general:
                 <div class="te te--color elipse--up">
                     <section class="te__text reveal down">
                         <h3 class="te__h3 reveal left">Té Matcha</h3>
-                        <p class="te__p reveal right">El té matcha es un tipo de té verde en polvo...</p>
+                        <p class="te__p reveal right">El té matcha es un tipo de té verde en polvo que se ha vuelto muy popular en los últimos años debido a sus numerosos beneficios para la salud y su sabor único. A diferencia de otros tés, el matcha se consume en su totalidad, lo que significa que se ingieren todas las propiedades de la hoja de té. Las propiedades y beneficios más destacados son:</p>
                         <ul class="te__ul">
                             <li>Alto contenido de antioxidantes</li>
                             <li>Mejora la concentración</li>
@@ -221,8 +218,8 @@ Estructura general:
                     </section>
                     <!-- Imagen de la té matcha -->
                     <picture class="te__img">
-                        <source srcset="img/te-matcha.png" type="image/webp">
-                        <img src="img/te-matcha.png" alt="tTaza oscura con plato, y té de color verde espeso y espumoso">
+                        <source srcset="img/te-matcha.webp" type="image/webp">
+                        <img src="img/te-matcha.jpg" alt="tTaza oscura con plato, y té de color verde espeso y espumoso" loading="lazy">
                     </picture>
                 </div>
             </section>
